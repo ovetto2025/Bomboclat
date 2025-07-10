@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_gray">#2C2C2C</color>
+    <color name="button_background">#75828D</color>
+    <color name="transparent_black_gradient_start">#00000000</color>
+    <color name="transparent_black_gradient_end">#CC000000</color>
+    <color name="bottom_nav_background">#333333</color>
+    <color name="bottom_nav_item_color">#CCCCCC</color>
+    <color name="bottom_nav_item_selected_color">#FFFFFF</color>
+    <color name="fab_background_color">#FFFFFF</color>
+    <color name="fab_icon_color">#000000</color>
+    <color name="event_background_tint">#30000000</color>
+    <color name="card_background">#E6FFFFFF</color>
+    <color name="card_border">#B3FFFFFF</color>
+    <color name="event_title_color">#424242</color>
+    <color name="event_subtitle_color">#616161</color>
+    <color name="event_description_color">#424242</color>
+    <color name="date_card_background">#424242</color>
+    <color name="date_card_text_color">#FFFFFF</color>
+    <color name="overlay">#66000000</color>
+
+</resources>

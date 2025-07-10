@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">MuseoArtiglieriaApp</string>
+
+
+    <string name="museum_storage_title">Museum Storage</string>
+    <string name="museum_address">Corso Lecce 10, Turin</string>
+    <string name="description_part1">The <b>National Historical Museum of Artillery</b> traces its origins back to <b>1731</b> as a collection within the <b>Arsenal</b> . It became an official institution in 1842 and was granted <b>\"national\"</b>  status in <b>1861</b>.</string>
+    <string name="description_part2">Transferred to the Mastio in 1893, it was expanded in 1961. Today, it houses over <b>12,000 artifacts</b>  that illustrate the technological and historical evolution of artillery, from the Middle Ages to the 20th century.</string>
+    <string name="description_part3">The Amione Barracks on Corso Lecce host the accessible storage facility and serve as an operational space for <b>research</b> and <b>conservation</b> .</string>
+    <string name="description_part4">This extraordinary heritage, <b>unique in Italy</b>, reflects both technical ingenuity and military tradition, deeply rooted in the context of the Risorgimento and the development of technical education.</string>
+    <string name="visit_archive_button_text">Visit the archive</string>
+    <string name="guide_map_title">Guide Map</string>
+    <string name="museum_header_description">Immagine di artiglieria storica nel museo.</string>
+    <string name="guide_map_description">Mappa della guida del museo che mostra la disposizione delle sale.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+   <string name="institutional_headquarters_title">Institutional headquarters</string>
+    <string name="institutional_address">Corso G. Ferraris 2, Turin</string>
+
+    <string name="institutional_description_part1">This location of the National Museum of Artillery is housed in the <b>Mastio della Cittadella</b>, the only surviving tower of Turin\'s 16th-century military citadel. Located at the corner of Corso Galileo Ferraris and Via Cernaia, it is a rare example of <b>Renaissance military</b>  architecture.</string>
+    <string name="institutional_description_part2">The museum\'s permanent collection includes<b>historic artillery pieces</b> , firearms, and military models, illustrating the evolution of warfare technology. Its thick walls and vaulted ceilings immerse visitors in centuries of military history.</string>
+    <string name="institutional_description_part3">Following major restoration between 2008 and 2018, the Mastio reopened with exhibitions, educational activities, and guided tours, serving as both a historical monument and a <b>cultural landmark</b> in the heart of Turin.</string>
+
+
+    <string name="close_button_description">Chiudi pagina</string>
+    <string name="institutional_header_description">Immagine della sede istituzionale.</string>
+    <string name="guide_map_description2">Mappa della guida della sede istituzionale.</string>
+
+
+
+    <string name="event_title_text">Artillery and Innovation</string>
+    <string name="event_subtitle_text">From Gunpowder to Drones</string>
+    <string name="event_description_part1">A temporary exhibition exploring the technological evolution of artillery from the Middle Ages to the present day, with a focus on engineering and scientific innovation.</string>
+    <string name="event_description_part2">Featuring key historical artifacts and engaging displays, the exhibition reveals how advances in design, materials, and ballistics transformed artillery and influenced military strategy throughout history.</string>
+
+
+    <string name="storage_archive_button_text">Storage Archive</string>
+    <string name="institutional_archive_button_text">Institutional Archive</string>
+
+    <string name="storage_archive_background_description">Immagine di sfondo per l\'archivio di deposito.</string>
+    <string name="institutional_archive_background_description">Immagine di sfondo per l\'archivio istituzionale.</string>
+
+
+    <string name="home_title">Home</string>
+    <string name="artillery_museum_title">Artillery Museum</string>
+    <string name="storage_subtitle">Storage</string>
+    <string name="upcoming_events_title">Upcoming Events</string>
+
+    <string name="corso_lecce_title">Corso Lecce 10</string>
+    <string name="corso_lecce_description">The Historical Artillery Museum welcomes you.\nClick to learn more.</string>
+    <string name="corso_lecce_image_description">Interno del museo con artiglieria storica.</string>
+
+    <string name="corso_ferraris_title">Corso G. Ferraris 2</string>
+    <string name="corso_ferraris_description">The Historical Artillery Museum welcomes you.\nClick to learn more.</string>
+    <string name="corso_ferraris_image_description">Artiglieria militare in un paesaggio di battaglia.</string>
+
+    <string name="arrow_right_description">Freccia verso destra</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_tickets">Biglietti</string>
+    <string name="nav_files">File</string>
+    <string name="nav_location">Posizione</string>
+    <string name="camera_button_description">Pulsante per la fotocamera</string>
+</resources>
+
+
