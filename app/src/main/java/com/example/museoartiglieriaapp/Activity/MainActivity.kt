@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.museoartiglieriaapp.CameraFragment
 import com.example.museoartiglieriaapp.R
 import com.example.museoartiglieriaapp.databinding.ActivityMainBinding // Assicurati che il nome sia corretto (di solito generato da activity_main.xml)
 import com.example.museoartiglieriaapp.Fragments.HomeFragment
@@ -37,12 +38,12 @@ class MainActivity : AppCompatActivity() {
 
         // 3. Carica il HomeFragment di default solo la prima volta e imposta l'item selezionato
         if (savedInstanceState == null) {
-            binding.navView.selectedItemId = R.id.navigation_home // Seleziona l'item home
+            binding.bottomNavigationView.selectedItemId = R.id.navigation_home // Seleziona l'item home
             loadFragment(HomeFragment(), "HOME_FRAGMENT_TAG", false)
         }
 
         // 4. Imposta il listener per la BottomNavigationView accedendo tramite binding
-        binding.navView.setOnItemSelectedListener { menuItem ->
+        binding.bottomNavigationView.setOnItemSelectedListener { menuItem ->
             val selectedFragment: Fragment? = when (menuItem.itemId) {
                 R.id.navigation_home -> HomeFragment()
                 R.id.navigation_tickets -> TicketsFragment()
@@ -59,6 +60,9 @@ class MainActivity : AppCompatActivity() {
             } else {
                 false // L'item non è stato gestito
             }
+        }
+        binding.fabCamera.setOnClickListener {
+            loadFragment(CameraFragment(), "CAMERA_FRAGMENT_TAG", true) // Aggiungi al backstack se vuoi poter tornare indietro
         }
 
     }
