@@ -61,6 +61,22 @@
     <string name="nav_files">File</string>
     <string name="nav_location">Posizione</string>
     <string name="camera_button_description">Pulsante per la fotocamera</string>
+
+
+    <string name="info_title">Info</string>
+    <string name="map_label">Map</string>
+    <string name="corso_lecce_address">Corso Lecce, 10, 10143 Torino</string>
+    <string name="opening_hours_title">Opening hours</string>
+    <string name="opening_hours_mon_fri_lecce">Mon–Fri: 09:30 – 18:30</string>
+    <string name="opening_hours_sat_sun_lecce">Sat–Sun: 09:30 – 19:00</string>
+    <string name="opening_hours_tue_thu_ferraris">Tue–Thu: 10:00 / 14:00–16:00</string>
+    <string name="opening_hours_mon_sun_closed_ferraris">Mon-Sun: Closed</string>
+    <string name="contacts_title">Contacts</string>
+    <string name="phone_number">01156033106</string>
+    <string name="email_segrmuseoart">segrmuseoart@cmeteo.esercito.difesa.it</string>
+    <string name="email_infomuseoart">infomuseoart@gmail.com</string>
+    <string name="institutional_address_long">Corso G. Ferraris, 2, 10121 Torino</string>
+
 </resources>
 
 
