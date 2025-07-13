@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.museoartiglieriaapp.Adapter.CarouselAdapter
 import com.example.museoartiglieriaapp.R
@@ -44,7 +45,11 @@ class HomeFragment : Fragment() {
         imageList.add(R.drawable.event_backgroud)
         // Aggiungi altre immagini se necessario
 
-        val adapter = CarouselAdapter(imageList) // Assicurati che il tuo CarouselAdapter sia corretto
+        val adapter = CarouselAdapter(imageList) { position ->
+            // Azione al click sull'item del carosello
+            Toast.makeText(requireContext(), "Hai cliccato sull'evento #${position + 1}", Toast.LENGTH_SHORT).show()
+            // Qui puoi aprire un dettaglio, navigare, ecc.
+        }
         binding.recyclerView.adapter = adapter
     }
 

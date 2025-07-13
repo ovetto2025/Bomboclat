@@ -9,7 +9,10 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.museoartiglieriaapp.R
 
-class CarouselAdapter(private val imageList: List<Int>) :
+class CarouselAdapter(
+    private val imageList: List<Int>,
+    private val onItemClick: ((Int) -> Unit)? = null // Callback opzionale
+) :
     RecyclerView.Adapter<CarouselAdapter.CarouselViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarouselViewHolder {
@@ -20,6 +23,9 @@ class CarouselAdapter(private val imageList: List<Int>) :
 
     override fun onBindViewHolder(holder: CarouselViewHolder, position: Int) {
         holder.imageView.setImageResource(imageList[position])
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(position)
+        }
     }
 
     override fun getItemCount(): Int {

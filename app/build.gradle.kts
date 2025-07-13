@@ -49,6 +49,9 @@ dependencies {
     implementation(libs.firebase.database.ktx)
     implementation(libs.androidx.legacy.support.v4)
     implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.camera.core)
+    implementation(libs.androidx.camera.lifecycle)
+    implementation(libs.androidx.camera.view)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -67,5 +70,9 @@ dependencies {
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("com.google.code.gson:gson:2.13.1")
 
+    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
+
+    // implementation("com.google.mlkit:barcode-scanning:17.2.0")
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
 
 }
