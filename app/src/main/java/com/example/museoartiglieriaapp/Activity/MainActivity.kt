@@ -6,7 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.example.museoartiglieriaapp.CameraFragment
+import com.example.museoartiglieriaapp.Fragments.CameraFragment
+
 import com.example.museoartiglieriaapp.R
 import com.example.museoartiglieriaapp.databinding.ActivityMainBinding // Assicurati che il nome sia corretto (di solito generato da activity_main.xml)
 import com.example.museoartiglieriaapp.Fragments.HomeFragment

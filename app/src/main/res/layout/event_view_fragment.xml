@@ -24,7 +24,6 @@
         android:layout_marginTop="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/close_button_description"
-
         android:src="@drawable/close_btn"
         app:tint="@color/white"
         app:layout_constraintStart_toStartOf="parent"

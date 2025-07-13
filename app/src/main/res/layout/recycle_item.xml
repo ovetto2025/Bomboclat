@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-
-        android:id="@+id/imageViewItem"/>
+        android:id="@+id/imageViewItem"
+        android:adjustViewBounds="true"/>
 
 </com.google.android.material.carousel.MaskableFrameLayout>
