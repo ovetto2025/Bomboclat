@@ -7,55 +7,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity">
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <FrameLayout
-        android:id="@+id/fragment_container"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-    
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottom_app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:layout_gravity="bottom"
-        android:background="@color/bottom_nav_background"
-        app:fabCradleVerticalOffset="0dp"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
-        app:fabCradleMargin="16dp"
-        app:contentInsetStart="0dp"
-        app:contentInsetEnd="0dp">
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/bottom_nav_background"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="10dp"
+            app:fabCradleVerticalOffset="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetEnd="0dp">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_view"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_gravity="bottom"
-        android:background="@color/bottom_nav_background"
-        app:itemIconTint="@color/bottom_nav_item_color"
-        app:itemTextColor="@color/bottom_nav_item_color"
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation_view"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
 
+                android:background="@color/bottom_nav_background"
+                app:itemIconTint="@color/bottom_nav_item_color"
+                app:itemTextColor="@color/bottom_nav_item_color"
+                app:labelVisibilityMode="unlabeled"
+                app:itemIconSize="24dp" app:menu="@menu/bottom_menu" />
+        </com.google.android.material.bottomappbar.BottomAppBar>
 
-        app:labelVisibilityMode="unlabeled"
-        app:itemIconSize="24dp"
-        app:menu="@menu/bottom_menu"
-        android:paddingBottom="8dp" />
-    </com.google.android.material.bottomappbar.BottomAppBar>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/camera_nav"
+            android:contentDescription="@string/camera_button_description"
+            app:layout_anchor="@id/bottom_app_bar"
+            app:backgroundTint="@color/fab_background_color"
+            app:tint="@color/fab_icon_color"
+            app:maxImageSize="36dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.FloatingActionButton" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_camera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="28dp"
-        android:src="@drawable/camera_nav"
-        android:contentDescription="@string/camera_button_description"
-        app:backgroundTint="@color/fab_background_color"
-        app:tint="@color/fab_icon_color"
-        app:maxImageSize="36dp"/>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </RelativeLayout>
