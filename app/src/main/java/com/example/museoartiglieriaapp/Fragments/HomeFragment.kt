@@ -33,13 +33,13 @@ class HomeFragment : Fragment() {
         // Listener per le card
         binding.cardCorsoLecce.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, LecceDetailFragment())
+                .replace(R.id.fragment_container, DetailsMuseumFragment())
                 .addToBackStack(null)
                 .commit()
         }
         binding.cardCorsoFerraris.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, FerrarisDetailFragment())
+                .replace(R.id.fragment_container, DetailsInstitutionalFragment())
                 .addToBackStack(null)
                 .commit()
         }

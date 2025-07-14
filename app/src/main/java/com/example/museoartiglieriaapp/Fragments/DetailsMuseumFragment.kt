@@ -38,6 +38,16 @@ class DetailsMuseumFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_details_museum, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.findViewById<View>(R.id.visit_archive_button)?.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, StorageArchiveFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+    }
+
     companion object {
         /**
          * Use this factory method to create a new instance of

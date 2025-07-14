@@ -4,18 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragments.InstitutionalMuseumFragment">
+    tools:context=".Fragments.InstitutionalMuseumFragment"
+    android:background="@color/black">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:background="@color/black"
-        tools:context=".InstitutionalDetailsActivity">
+        tools:context=".InstitutionalDetailsActivity"
+        android:layout_marginBottom="70dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+            >
 
         <ImageView
             android:id="@+id/header_image"
