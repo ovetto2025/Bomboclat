@@ -15,7 +15,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-   <string name="institutional_headquarters_title">Institutional headquarters</string>
+    <string name="institutional_headquarters_title">Institutional headquarters</string>
     <string name="institutional_address">Corso G. Ferraris 2, Turin</string>
 
     <string name="institutional_description_part1">This location of the National Museum of Artillery is housed in the <b>Mastio della Cittadella</b>, the only surviving tower of Turin\'s 16th-century military citadel. Located at the corner of Corso Galileo Ferraris and Via Cernaia, it is a rare example of <b>Renaissance military</b>  architecture.</string>
@@ -26,7 +26,6 @@
     <string name="close_button_description">Chiudi pagina</string>
     <string name="institutional_header_description">Immagine della sede istituzionale.</string>
     <string name="guide_map_description2">Mappa della guida della sede istituzionale.</string>
-
 
 
     <string name="event_title_text">Artillery and Innovation</string>
