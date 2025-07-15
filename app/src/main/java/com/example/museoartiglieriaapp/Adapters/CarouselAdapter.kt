@@ -7,7 +7,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.museoartiglieriaapp.Fragments.EventViewFragment
 import com.example.museoartiglieriaapp.R
 
 class CarouselAdapter(
@@ -31,15 +30,6 @@ class CarouselAdapter(
         holder.imageView.setImageResource(images[position])
         holder.titleView.text = titles[position]
 
-        // Aggiungi il click listener solo per la prima immagine
-        holder.itemView.setOnClickListener {
-            if (position == 0) {
-                fragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, EventViewFragment())
-                    .addToBackStack(null)
-                    .commit()
-            }
-        }
     }
 
     override fun getItemCount(): Int = images.size
