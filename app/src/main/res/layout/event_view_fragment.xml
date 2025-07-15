@@ -30,7 +30,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ttsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_btn_speak_now"
+        android:contentDescription="Leggi informazioni"
+        android:layout_gravity="top|right"
+        android:layout_margin="12dp"
+        android:backgroundTint="@color/white"
+        android:tint="@color/black"
+        />
 
     <LinearLayout
         android:layout_marginTop="100dp"
