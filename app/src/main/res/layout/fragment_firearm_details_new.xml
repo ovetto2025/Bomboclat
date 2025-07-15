@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3E3A35"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Immagine -->
+        <ImageView
+            android:id="@+id/rifleImage"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Titolo -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-50dp"
+            android:padding="12dp"
+            android:text="M91"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:shadowColor="#80000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="40"
+            app:layout_constraintTop_toBottomOf="@+id/rifleImage"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Informazioni -->
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:text="Origin: Italy\nYear: 1891\nUse: Infantry\nFirst Use: WWI"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/titleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Card 1 - Trivia -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_trivia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#778DA9"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/infoText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/title_trivia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TRIVIA"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#3E3A35"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/trivia_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Infamously associated with the assassination of JFK, as the Carcano M91 was the rifle used.It was one of the first rifles to use a clip-loaded magazine system.Production lasted until the late 1940s with several updates."
+                    android:textSize="15sp"
+                    android:textColor="#3E3A35"
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 2 - Technical Specifications -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_specs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#B2AD79"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/card_trivia"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/title_specs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TECHNICAL SPECIFICATIONS"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#3E3A35"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/specs_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Caliber: 6.5×52mm Carcano
+                        \nWeight: 4.1 kg (9 lbs)
+                        \nMagazine Capacity: 6 rounds (internal)
+                        \nAction: Bolt-action
+                        \nEffective Range: ~300 m (328 yd)"
+                    android:textSize="15sp"
+                    android:textColor="#000000"
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 3 - Brief History -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_history"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/card_specs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/title_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BRIEF HISTORY"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#3E3A35"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/history_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The Carcano M91 rifle served as the backbone of Italian infantry for over 50 years. Its design influenced many variants and was Italy's primary infantry rifle through two world wars. Despite criticism over its stopping power, it was valued for its accuracy and ruggedness. The rifle also saw limited use in other countries post-WWII."
+                    android:textSize="15sp"
+                    android:textColor="#000000"
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
