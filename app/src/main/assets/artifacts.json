@@ -74,7 +74,7 @@
     ],
     "brief_history": "The Tiger I was designed to dominate Allied armor with its powerful 88 mm gun and thick armor. It was nearly invulnerable from the front, but complex and prone to mechanical failure. It became a legendary tank, feared for its killing power, especially in open battle. However, its limited numbers and high cost hindered Germany's ability to mass-deploy it."
   },
-  "IS 2": {
+  "IS_2": {
     "category": "tank",
     "technical_specifications": {
       "weight": "46 tons",
@@ -142,7 +142,7 @@
     ],
     "brief_history": "The Carcano M91 rifle served as the backbone of Italian infantry for over 50 years. Its design influenced many variants and was Italy's primary infantry rifle through two world wars. Despite criticism over its stopping power, it was valued for its accuracy and ruggedness. The rifle also saw limited use in other countries post-WWII."
   },
-  "M 91/30": {
+  "M-91/30": {
     "category": "rifle",
     "technical_specifications": {
       "caliber": "7.62×54mmR",
@@ -306,7 +306,7 @@
     ],
     "brief_history": "The Épée-Baïonnette Modèle 1886, known simply as 'Lebel,' was a French bayonet designed for thrusting, not slashing. Its cruciform blade made wounds hard to treat, drawing criticism. It was issued en masse in WWI, remaining in use into WWII. Often modified or shortened in the interwar years, it remains one of history's longest standard bayonets."
   },
-  "SEITENgewehr": {
+  "SEITENGEWEHR": {
     "category": "bayonet",
     "technical_specifications": {
       "length": "~50 cm (19.7 in)",
