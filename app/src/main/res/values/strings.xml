@@ -32,6 +32,10 @@
     <string name="event_subtitle_text">From Gunpowder to Drones</string>
     <string name="event_description_part1">A temporary exhibition exploring the technological evolution of artillery from the Middle Ages to the present day, with a focus on engineering and scientific innovation.</string>
     <string name="event_description_part2">Featuring key historical artifacts and engaging displays, the exhibition reveals how advances in design, materials, and ballistics transformed artillery and influenced military strategy throughout history.</string>
+    <string name="event2_title_text">Shh, let the cannon speak</string>
+    <string name="event2_subtitle_text">Tales of War and Men</string>
+    <string name="event2_description_part1">An evening lantern-lit tour through the museum, where actors in period costumes portray soldiers, engineers, and civilians connected to the history of artillery. Each station shares a true story or one inspired by historical letters, diaries, and documents. </string>
+    <string name="event2_description_part2">The experience brings to life the human emotions, challenges, and everyday realities behind the weapons, offering visitors an immersive journey into the personal histories that shaped artillery and its role in society. </string>
 
 
     <string name="storage_archive_button_text">Storage Archive</string>

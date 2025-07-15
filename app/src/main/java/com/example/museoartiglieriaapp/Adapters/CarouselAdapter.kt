@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.museoartiglieriaapp.Fragments.EventView2Fragment
 import com.example.museoartiglieriaapp.Fragments.EventViewFragment
 import com.example.museoartiglieriaapp.R
 
@@ -39,6 +40,13 @@ class CarouselAdapter(
                     .addToBackStack(null)
                     .commit()
             }
+            if (position == 1) {
+                fragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container, EventView2Fragment())
+                    .addToBackStack(null)
+                    .commit()
+            }
+
         }
     }
 

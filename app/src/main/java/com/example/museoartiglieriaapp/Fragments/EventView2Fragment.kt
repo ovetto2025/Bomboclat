@@ -1,17 +1,17 @@
 package com.example.museoartiglieriaapp.Fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.speech.tts.TextToSpeech
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
-import android.speech.tts.TextToSpeech
+import androidx.fragment.app.Fragment
 import com.example.museoartiglieriaapp.R
 import java.util.Locale
 
-class EventViewFragment : Fragment() {
+class EventView2Fragment : Fragment() {
     private var tts: TextToSpeech? = null
 
     override fun onCreateView(
@@ -19,7 +19,7 @@ class EventViewFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.event_view_fragment, container, false)
+        return inflater.inflate(R.layout.event_view2_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -38,7 +38,6 @@ class EventViewFragment : Fragment() {
         val title = view.findViewById<TextView>(R.id.event_title)
         val eventDay = view.findViewById<TextView>(R.id.event_day)
         val eventMonth = view.findViewById<TextView>(R.id.event_month)
-
         val description = view.findViewById<TextView>(R.id.event_description_part1)
         val description2 = view.findViewById<TextView>(R.id.event_description_part2)
 
@@ -67,4 +66,5 @@ class EventViewFragment : Fragment() {
         tts?.shutdown()
         super.onDestroyView()
     }
+
 }
