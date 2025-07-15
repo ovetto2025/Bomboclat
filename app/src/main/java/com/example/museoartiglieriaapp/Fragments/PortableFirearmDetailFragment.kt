@@ -24,6 +24,11 @@ fun loadJsonFromAsset(context: Context, filename: String): String {
     return context.assets.open(filename).bufferedReader().use { it.readText() }
 }
 
+// Funzione per normalizzare il nome dell'artefatto
+fun normalizeName(name: String): String {
+    return name.trim().replace(" ", "_").uppercase()
+}
+
 class PortableFirearmDetailFragment : Fragment() {
     companion object {
         private const val ARG_FIREARM = "arg_firearm"
@@ -105,7 +110,7 @@ class PortableFirearmDetailFragment : Fragment() {
             historyText.visibility = View.GONE
 
             // --- Caricamento e parsing JSON ---
-            val artifactName = it.name
+            val artifactName = normalizeName(it.name)
             val jsonString = loadJsonFromAsset(requireContext(), "artifacts.json")
             val jsonObject = JSONObject(jsonString)
             val artifactJson = jsonObject.optJSONObject(artifactName)
