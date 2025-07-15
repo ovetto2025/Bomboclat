@@ -142,7 +142,7 @@
     ],
     "brief_history": "The Carcano M91 rifle served as the backbone of Italian infantry for over 50 years. Its design influenced many variants and was Italy's primary infantry rifle through two world wars. Despite criticism over its stopping power, it was valued for its accuracy and ruggedness. The rifle also saw limited use in other countries post-WWII."
   },
-  "M-91/30": {
+  "M91/30": {
     "category": "rifle",
     "technical_specifications": {
       "caliber": "7.62×54mmR",
