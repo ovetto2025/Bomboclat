@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.museoartiglieriaapp.Fragments.EventViewFragment
 import com.example.museoartiglieriaapp.R
 
 class CarouselAdapter(
