@@ -74,7 +74,7 @@
     ],
     "brief_history": "The Tiger I was designed to dominate Allied armor with its powerful 88 mm gun and thick armor. It was nearly invulnerable from the front, but complex and prone to mechanical failure. It became a legendary tank, feared for its killing power, especially in open battle. However, its limited numbers and high cost hindered Germany's ability to mass-deploy it."
   },
-  "IS_2": {
+  "IS-2": {
     "category": "tank",
     "technical_specifications": {
       "weight": "46 tons",
@@ -92,7 +92,7 @@
     ],
     "brief_history": "Designed to destroy German heavy tanks and fortifications, the IS-2 was the Soviet Union's most powerful tank of the war. Its massive 122 mm gun was deadly against armor and bunkers. The IS-2 led the charge into Berlin in 1945, symbolizing Soviet strength. Post-war, it was gradually replaced but remained in service for decades in allied nations."
   },
-  "M_13/40": {
+  "M13/40": {
     "category": "tank",
     "technical_specifications": {
       "weight": "13.5 tons",

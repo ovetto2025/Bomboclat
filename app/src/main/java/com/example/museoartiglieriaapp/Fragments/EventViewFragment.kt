@@ -4,17 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import com.example.museoartiglieriaapp.R
 
-class DetailsInstitutionalFragment : Fragment() {
+class EventViewFragment : Fragment() {
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_details_institutional, container, false)
+        return inflater.inflate(R.layout.event_view_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -22,15 +23,10 @@ class DetailsInstitutionalFragment : Fragment() {
 
         // Gestione del pulsante di chiusura
         view.findViewById<ImageButton>(R.id.close_button)?.setOnClickListener {
+            // Torna alla home
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, HomeFragment())
                 .commit()
-        view.findViewById<Button>(R.id.visit_archive_button)?.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, StorageArchiveFragment())
-                .addToBackStack(null)
-                .commit()
         }
     }
-}
 }

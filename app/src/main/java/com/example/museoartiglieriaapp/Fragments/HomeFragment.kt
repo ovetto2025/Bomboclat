@@ -5,110 +5,62 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.museoartiglieriaapp.Adapter.CarouselAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.museoartiglieriaapp.Adapters.CarouselAdapter
 import com.example.museoartiglieriaapp.R
-import com.example.museoartiglieriaapp.databinding.FragmentHomeBinding
 import com.google.android.material.carousel.CarouselLayoutManager
-import com.google.android.material.carousel.CarouselSnapHelper
 
 class HomeFragment : Fragment() {
-
-    private var _binding: FragmentHomeBinding? = null
-    // Questa proprietà è valida solo tra onCreateView e onDestroyView.
-    private val binding get() = _binding!!
-
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        return binding.root
+    ): View? {
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupCarousel()
+        // Setup del carosello
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
+        recyclerView.layoutManager = CarouselLayoutManager()
 
-        // Listener per le card
-        binding.cardCorsoLecce.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, DetailsMuseumFragment())
-                .addToBackStack(null)
-                .commit()
-        }
-        binding.cardCorsoFerraris.setOnClickListener {
+        // Lista delle immagini e dei titoli corrispondenti
+        val images = listOf(
+            R.drawable.event_backgroud,
+            R.drawable.event_2
+        )
+
+        val titles = listOf(
+            "Artillery & Innovation",
+            "Shh, let the cannon speak!"
+        )
+
+        // Inizializzazione dell'adapter con immagini, titoli e fragmentManager
+        val adapter = CarouselAdapter(images, titles, parentFragmentManager)
+        recyclerView.adapter = adapter
+
+        // Setup degli altri elementi della home...
+        setupHomeButtons(view)
+    }
+
+    private fun setupHomeButtons(view: View) {
+        // Gestione del click sulla card del museo istituzionale
+        view.findViewById<View>(R.id.card_corso_lecce)?.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, DetailsInstitutionalFragment())
                 .addToBackStack(null)
                 .commit()
         }
-    }
 
-    private fun setupCarousel() {
-        binding.recyclerView.setHasFixedSize(true)
-
-        binding.recyclerView.layoutManager = CarouselLayoutManager()
-
-        CarouselSnapHelper().attachToRecyclerView(binding.recyclerView)
-
-        val imageList = mutableListOf<Int>()
-        imageList.add(R.drawable.event_backgroud)
-        imageList.add(R.drawable.event_backgroud)
-        imageList.add(R.drawable.event_backgroud)
-        // Aggiungi altre immagini se necessario
-
-        val adapter = CarouselAdapter(imageList) { position ->
-            // Apri il fragment di dettaglio quando si clicca su un elemento del carousel
-            openCarouselDetail(position)
+        // Gestione del click sulla card del deposito
+        view.findViewById<View>(R.id.card_corso_ferraris)?.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, DetailsMuseumFragment())
+                .addToBackStack(null)
+                .commit()
         }
-        binding.recyclerView.adapter = adapter
-    }
-
-    private fun openCarouselDetail(position: Int) {
-        // Dati per le descrizioni degli eventi
-        val eventTitles = listOf(
-            "Mostra Storica",
-            "Esposizione Temporanea", 
-            "Evento Speciale"
-        )
-        
-        val eventDescriptions = listOf(
-            "Una mostra dedicata alla storia dell'artiglieria italiana, con pezzi unici risalenti al XIX secolo. " +
-            "Scopri le innovazioni tecnologiche che hanno caratterizzato l'evoluzione dell'artiglieria militare " +
-            "attraverso i secoli, con particolare attenzione ai periodi delle guerre mondiali.",
-            
-            "Esposizione temporanea di modelli in scala e diorami storici. " +
-            "I visitatori potranno ammirare ricostruzioni dettagliate di battaglie famose " +
-            "e comprendere meglio le strategie militari dell'epoca.",
-            
-            "Evento speciale con dimostrazioni dal vivo e visite guidate tematiche. " +
-            "I nostri esperti ti accompagneranno in un viaggio attraverso la storia " +
-            "dell'artiglieria, con focus su tecniche di restauro e conservazione."
-        )
-        
-        val imageList = listOf(
-            R.drawable.event_backgroud,
-            R.drawable.event_backgroud,
-            R.drawable.event_backgroud
-        )
-        
-        // Crea il fragment di dettaglio
-        val detailFragment = CarouselDetailFragment.newInstance(
-            imageList[position],
-            eventTitles[position],
-            eventDescriptions[position]
-        )
-        
-        // Sostituisci il fragment corrente con quello di dettaglio
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, detailFragment, "CAROUSEL_DETAIL_TAG")
-            .addToBackStack("CAROUSEL_DETAIL_TAG")
-            .commit()
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null // Pulisci il riferimento al binding per evitare memory leak
     }
 }

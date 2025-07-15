@@ -25,6 +25,19 @@
                app:layout_constraintStart_toStartOf="parent"
                app:layout_constraintTop_toTopOf="parent"
                android:contentDescription="@string/museum_header_description" />
+           <ImageButton
+
+               android:id="@+id/close_button"
+               android:layout_width="48dp"
+               android:layout_height="48dp"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="16dp"
+               android:background="?attr/selectableItemBackgroundBorderless"
+               android:contentDescription="@string/close_button_description"
+               android:src="@drawable/close_btn"
+               app:tint="@color/white"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
 
            <View
                android:id="@+id/gradient_overlay"
@@ -153,7 +166,7 @@
                app:layout_constraintStart_toStartOf="parent"
                app:layout_constraintTop_toBottomOf="@+id/visit_archive_button" />
 
-           <ImageView
+           <com.github.chrisbanes.photoview.PhotoView
                android:id="@+id/guide_map_image"
                android:layout_width="0dp"
                android:layout_height="wrap_content"
