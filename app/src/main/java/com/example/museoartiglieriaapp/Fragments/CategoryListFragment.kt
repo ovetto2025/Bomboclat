@@ -9,15 +9,11 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.museoartiglieriaapp.Adapter.StorageItemAdapter
 import com.example.museoartiglieriaapp.Models.StorageItem
+import com.example.museoartiglieriaapp.Models.PortableFirearm
 import com.example.museoartiglieriaapp.R
 import com.example.museoartiglieriaapp.Repository.StorageRepository
-import android.speech.tts.TextToSpeech
-import java.util.Locale
 
 class CategoryListFragment : Fragment() {
-    private var tts: TextToSpeech? = null
-    private var adapter: StorageItemAdapter? = null
-
     companion object {
         private const val ARG_CATEGORY = "arg_category"
         
@@ -44,24 +40,25 @@ class CategoryListFragment : Fragment() {
         
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerViewCategory)
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
-        adapter = StorageItemAdapter(items) { item ->
+        recyclerView.adapter = StorageItemAdapter(items) { item ->
+            // Conversione StorageItem -> PortableFirearm
+            val yearInt = item.yearOfProduction.toIntOrNull() ?: 0
+            val firearm = PortableFirearm(
+                id = item.id,
+                name = item.name,
+                image = item.image,
+                origin = item.origin,
+                yearOfProduction = yearInt,
+                historicalUse = item.historicalUse,
+                firstAppearance = item.firstAppearance,
+                briefHistory = item.briefHistory,
+                trivia = item.trivia,
+                technicalSpecifications = item.technicalSpecifications
+            )
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, StorageItemDetailFragment.newInstance(item))
+                .replace(R.id.fragment_container, PortableFirearmDetailFragment.newInstance(firearm))
                 .addToBackStack(null)
                 .commit()
         }
-        recyclerView.adapter = adapter
-        tts = TextToSpeech(requireContext()) { status ->
-            if (status == TextToSpeech.SUCCESS) {
-                tts?.language = Locale.getDefault()
-                adapter?.setTTS(tts!!)
-            }
-        }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        tts?.stop()
-        tts?.shutdown()
     }
 } 

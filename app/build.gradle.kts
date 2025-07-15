@@ -77,4 +77,6 @@ dependencies {
 
     implementation("androidx.gridlayout:gridlayout:1.0.0")
 
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
 }

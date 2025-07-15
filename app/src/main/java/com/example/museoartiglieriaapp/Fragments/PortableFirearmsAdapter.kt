@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.museoartiglieriaapp.R
+import com.example.museoartiglieriaapp.Models.PortableFirearm
 
 class PortableFirearmsAdapter(
     private val firearms: List<PortableFirearm>,
