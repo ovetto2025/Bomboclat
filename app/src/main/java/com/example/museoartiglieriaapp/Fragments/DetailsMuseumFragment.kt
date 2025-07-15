@@ -1,11 +1,17 @@
 package com.example.museoartiglieriaapp.Fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageButton
+import androidx.fragment.app.Fragment
 import com.example.museoartiglieriaapp.R
+import android.speech.tts.TextToSpeech
+import android.widget.TextView
+import android.widget.ImageView
+import java.util.Locale
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,17 +24,10 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class DetailsMuseumFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+
+    private var tts: TextToSpeech? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,31 +39,59 @@ class DetailsMuseumFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<View>(R.id.visit_archive_button)?.setOnClickListener {
+
+        // Gestione del pulsante di chiusura
+        view.findViewById<ImageButton>(R.id.close_button)?.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, HomeFragment())
+                .commit()
+        }
+
+        view.findViewById<Button>(R.id.visit_archive_button)?.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, StorageArchiveFragment())
                 .addToBackStack(null)
                 .commit()
         }
+
+        // Inizializzazione delle view per il TTS
+        val ttsButton = view.findViewById<View>(R.id.ttsButton)
+        val title = view.findViewById<TextView>(R.id.museum_title)
+        val address = view.findViewById<TextView>(R.id.museum_address)
+        val desc1 = view.findViewById<TextView>(R.id.description_part1)
+        val desc2 = view.findViewById<TextView>(R.id.description_part2)
+        val desc3 = view.findViewById<TextView>(R.id.description_part3)
+
+        // Inizializzazione del TTS
+        tts = TextToSpeech(requireContext()) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                tts?.language = Locale.ITALIAN
+            }
+        }
+
+        // Gestione del click sul bottone TTS
+        ttsButton.setOnClickListener {
+            val info = StringBuilder()
+            info.append("${title.text}. ")
+            info.append("${address.text}. ")
+            info.append("${desc1.text}. ")
+            info.append("${desc2.text}. ")
+            info.append("${desc3.text}.")
+            tts?.speak(info.toString(), TextToSpeech.QUEUE_FLUSH, null, null)
+        }
+
+        // Gestione della mappa zoomabile
+        val mapImage = view.findViewById<ImageView>(R.id.guide_map_image)
+        mapImage.setOnClickListener {
+            DialogMapZoom(R.drawable.mappa_ferraris).show(parentFragmentManager, "zoomMap")
+        }
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment DetailsMuseumFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            DetailsMuseumFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onDestroyView() {
+        tts?.stop()
+        tts?.shutdown()
+        super.onDestroyView()
     }
+
+
 }
