@@ -9,21 +9,22 @@
 
     <TextView
         android:id="@+id/tickets_title"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RESERVATIONS"
-        android:textSize="32sp"
+        android:text="Reservations"
+        android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:gravity="center"
+        android:fontFamily="@font/inter"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="32dp" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_book_visit"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginBottom="24dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         android:clickable="true"
@@ -33,17 +34,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="BOOK YOUR VISIT"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="@color/black" />
+            android:gravity="bottom|start"
+            android:textColor="@color/black"
+            android:paddingStart="16dp"
+            android:paddingBottom="16dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="8dp" />
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_your_reservations"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         android:clickable="true"
@@ -53,10 +58,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="YOUR RESERVATIONS"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="@color/black" />
+            android:gravity="bottom|start"
+            android:textColor="@color/black"
+            android:paddingStart="16dp"
+            android:paddingBottom="16dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="8dp" />
     </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>

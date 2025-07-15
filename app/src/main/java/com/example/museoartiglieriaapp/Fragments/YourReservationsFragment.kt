@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.widget.TextView
 import com.example.museoartiglieriaapp.Model.ReservationRepository
 import com.example.museoartiglieriaapp.Model.Reservation
+import android.widget.ImageView
 
 class YourReservationsFragment : Fragment() {
     private lateinit var adapter: ReservationAdapter
@@ -52,6 +53,9 @@ class YourReservationsFragment : Fragment() {
             holder.ticketTypeText.text = res.ticketType
             holder.timeText.text = res.time
             holder.locationText.text = res.location
+            holder.dateText.text = res.date
+            val imageRes = holder.itemView.context.resources.getIdentifier(res.ticketImage, "drawable", holder.itemView.context.packageName)
+            holder.ticketImage.setImageResource(imageRes)
         }
     }
 
@@ -59,5 +63,7 @@ class YourReservationsFragment : Fragment() {
         val ticketTypeText: TextView = view.findViewById(R.id.ticketTypeText)
         val timeText: TextView = view.findViewById(R.id.timeText)
         val locationText: TextView = view.findViewById(R.id.locationText)
+        val dateText: TextView = view.findViewById(R.id.dateText)
+        val ticketImage: ImageView = view.findViewById(R.id.ticketImage)
     }
 } 

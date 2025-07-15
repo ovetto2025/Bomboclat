@@ -17,6 +17,9 @@ import androidx.core.view.isVisible
 import com.example.museoartiglieriaapp.Model.ReservationRepository
 import com.example.museoartiglieriaapp.Model.Reservation
 import android.util.Log
+import java.text.SimpleDateFormat
+import java.util.Locale
+import android.widget.DatePicker
 
 class NewReservationFragment : Fragment() {
     override fun onCreateView(
@@ -88,10 +91,13 @@ class NewReservationFragment : Fragment() {
                     2 -> "VIP"
                     else -> null
                 }
+                val datePicker = view.findViewById<DatePicker>(R.id.date_picker)
                 ReservationRepository.draft = Reservation(
                     ticketType = selectedTicketType ?: "",
                     time = selectedTime ?: "",
-                    location = selectedLocation ?: ""
+                    location = selectedLocation ?: "",
+                    date = getSelectedDate(datePicker),
+                    ticketImage = getTicketImage(selectedTicketType)
                 )
             }
         }
@@ -116,10 +122,13 @@ class NewReservationFragment : Fragment() {
                 btn.setBackgroundColor(selectedColor)
                 btn.setTextColor(textColorSelected)
                 selectedTime = btn.text.toString()
+                val datePicker = view.findViewById<DatePicker>(R.id.date_picker)
                 ReservationRepository.draft = Reservation(
                     ticketType = selectedTicketType ?: "",
                     time = selectedTime ?: "",
-                    location = selectedLocation ?: ""
+                    location = selectedLocation ?: "",
+                    date = getSelectedDate(datePicker),
+                    ticketImage = getTicketImage(selectedTicketType)
                 )
             }
         }
@@ -153,13 +162,32 @@ class NewReservationFragment : Fragment() {
             arrowIcon.setImageResource(R.drawable.ic_arrow_up)
             locationViews.forEach { it.isSelected = false }
             v.isSelected = true
+            val datePicker = view.findViewById<DatePicker>(R.id.date_picker)
             ReservationRepository.draft = Reservation(
                 ticketType = selectedTicketType ?: "",
                 time = selectedTime ?: "",
-                location = selectedLocation ?: ""
+                location = selectedLocation ?: "",
+                date = getSelectedDate(datePicker),
+                ticketImage = getTicketImage(selectedTicketType)
             )
         }
         location1.setOnClickListener(locationClickListener)
         location2.setOnClickListener(locationClickListener)
+    }
+
+    private fun getSelectedDate(datePicker: DatePicker): String {
+        val day = datePicker.dayOfMonth
+        val month = datePicker.month + 1
+        val year = datePicker.year
+        return String.format("%02d/%02d/%04d", day, month, year)
+    }
+
+    private fun getTicketImage(type: String?): String {
+        return when (type) {
+            "Single" -> "ic_single_ticket"
+            "Family" -> "ic_family"
+            "VIP" -> "ic_vip"
+            else -> "ic_single_ticket"
+        }
     }
 } 

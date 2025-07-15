@@ -27,5 +27,11 @@ class TicketsFragment : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
+        view.findViewById<MaterialCardView>(R.id.card_your_reservations).setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, YourReservationsFragment())
+                .addToBackStack(null)
+                .commit()
+        }
     }
 }
