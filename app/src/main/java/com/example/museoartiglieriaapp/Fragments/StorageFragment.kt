@@ -19,5 +19,15 @@ class StorageFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_storage, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.findViewById<View>(R.id.button_storage_archive).setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, StorageArchiveFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+    }
+
 }
 

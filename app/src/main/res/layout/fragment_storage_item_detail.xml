@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_home">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/item_detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_shape"
+            android:background="@drawable/corner_shape_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/corner_shape"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:id="@+id/item_detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample Name"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/item_detail_origin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Origin: Sample Origin"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/item_detail_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Year: 1940"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/item_detail_use"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Use: WWII"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/item_detail_first_appearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First Appearance: Sample First Appearance"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brief History"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/item_detail_brief_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample brief history text."
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView> 

@@ -30,7 +30,7 @@
                 android:id="@+id/textViewHome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="40dp"
                 android:fontFamily="@font/inter"
                 android:text="@string/home_title"
                 android:textColor="@color/black"
@@ -45,7 +45,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:fontFamily="@font/inter"
                 android:text="@string/artillery_museum_title"
@@ -61,7 +61,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="2dp"
                 android:layout_marginEnd="24dp"
                 android:fontFamily="@font/inter"
                 android:text="@string/storage_subtitle"
@@ -79,9 +79,8 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:clickable="false"
-                android:focusable="false"
-                android:foreground="@null"
+                android:clickable="true"
+                android:focusable="true"
                 app:cardBackgroundColor="@android:color/transparent"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="8dp"
@@ -89,49 +88,52 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-                <ImageView
-                    android:id="@+id/image_corso_lecce_background"
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:contentDescription="@string/corso_lecce_image_description"
-                    android:focusable="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/istitutional_home_btn" />
+                    android:layout_height="match_parent">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/overlay" />
+                    <ImageView
+                        android:id="@+id/image_corso_lecce_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/istitutional_home_btn"
+                        android:contentDescription="@string/corso_lecce_image_description"
+                        android:background="?attr/selectableItemBackground" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="8dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="16dp">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/overlay" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/corso_lecce_title"
-                        android:textColor="@color/white"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="16dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/corso_lecce_description"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/corso_lecce_title"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/inter" />
 
-
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/corso_lecce_description"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/inter" />
+                    </LinearLayout>
+                </FrameLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
@@ -141,9 +143,8 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:clickable="false"
-                android:focusable="false"
-                android:foreground="@null"
+                android:clickable="true"
+                android:focusable="true"
                 app:cardBackgroundColor="@android:color/transparent"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="8dp"
@@ -151,49 +152,52 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/card_corso_lecce">
 
-                <ImageView
-                    android:id="@+id/image_corso_ferraris_background"
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:contentDescription="@string/corso_ferraris_image_description"
-                    android:focusable="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/storage_home_btn" />
+                    android:layout_height="match_parent">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/overlay" />
+                    <ImageView
+                        android:id="@+id/image_corso_ferraris_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/storage_home_btn"
+                        android:contentDescription="@string/corso_ferraris_image_description"
+                        android:background="?attr/selectableItemBackground" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="8dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="16dp">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/overlay" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/corso_ferraris_title"
-                        android:textColor="@color/white"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="16dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/corso_ferraris_description"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/corso_ferraris_title"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/inter" />
 
-
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/corso_ferraris_description"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/inter" />
+                    </LinearLayout>
+                </FrameLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <androidx.constraintlayout.widget.ConstraintLayout

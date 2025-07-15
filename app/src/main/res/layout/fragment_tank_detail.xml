@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_home">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/tank_detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_shape"
+            android:contentDescription="Tank image" />
+
+        <TextView
+            android:id="@+id/tank_detail_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tank Name"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tank_detail_origin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Origin: "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tank_detail_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Year: "
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tank_detail_use"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use: "
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tank_detail_first_appearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First Appearance: "
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tank_detail_brief_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Brief History"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+</ScrollView> 

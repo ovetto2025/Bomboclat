@@ -29,6 +29,20 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupCarousel()
+
+        // Listener per le card
+        binding.cardCorsoLecce.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, DetailsMuseumFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+        binding.cardCorsoFerraris.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, DetailsInstitutionalFragment())
+                .addToBackStack(null)
+                .commit()
+        }
     }
 
     private fun setupCarousel() {
@@ -44,8 +58,53 @@ class HomeFragment : Fragment() {
         imageList.add(R.drawable.event_backgroud)
         // Aggiungi altre immagini se necessario
 
-        val adapter = CarouselAdapter(imageList) // Assicurati che il tuo CarouselAdapter sia corretto
+        val adapter = CarouselAdapter(imageList) { position ->
+            // Apri il fragment di dettaglio quando si clicca su un elemento del carousel
+            openCarouselDetail(position)
+        }
         binding.recyclerView.adapter = adapter
+    }
+
+    private fun openCarouselDetail(position: Int) {
+        // Dati per le descrizioni degli eventi
+        val eventTitles = listOf(
+            "Mostra Storica",
+            "Esposizione Temporanea", 
+            "Evento Speciale"
+        )
+        
+        val eventDescriptions = listOf(
+            "Una mostra dedicata alla storia dell'artiglieria italiana, con pezzi unici risalenti al XIX secolo. " +
+            "Scopri le innovazioni tecnologiche che hanno caratterizzato l'evoluzione dell'artiglieria militare " +
+            "attraverso i secoli, con particolare attenzione ai periodi delle guerre mondiali.",
+            
+            "Esposizione temporanea di modelli in scala e diorami storici. " +
+            "I visitatori potranno ammirare ricostruzioni dettagliate di battaglie famose " +
+            "e comprendere meglio le strategie militari dell'epoca.",
+            
+            "Evento speciale con dimostrazioni dal vivo e visite guidate tematiche. " +
+            "I nostri esperti ti accompagneranno in un viaggio attraverso la storia " +
+            "dell'artiglieria, con focus su tecniche di restauro e conservazione."
+        )
+        
+        val imageList = listOf(
+            R.drawable.event_backgroud,
+            R.drawable.event_backgroud,
+            R.drawable.event_backgroud
+        )
+        
+        // Crea il fragment di dettaglio
+        val detailFragment = CarouselDetailFragment.newInstance(
+            imageList[position],
+            eventTitles[position],
+            eventDescriptions[position]
+        )
+        
+        // Sostituisci il fragment corrente con quello di dettaglio
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, detailFragment, "CAROUSEL_DETAIL_TAG")
+            .addToBackStack("CAROUSEL_DETAIL_TAG")
+            .commit()
     }
 
     override fun onDestroyView() {
