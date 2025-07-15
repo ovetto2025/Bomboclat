@@ -24,6 +24,9 @@ class PaymentFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val expirationInput = view.findViewById<EditText>(R.id.expirationInput)
+        val cardHolderInput = view.findViewById<EditText>(R.id.cardHolderInput)
+        val cardNumberInput = view.findViewById<EditText>(R.id.cardNumberInput)
+        val cvvInput = view.findViewById<EditText>(R.id.cvvInput)
         expirationInput.addTextChangedListener(object : TextWatcher {
             var isEditing = false
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -47,6 +50,34 @@ class PaymentFragment : Fragment() {
 
         val checkoutButton = view.findViewById<MaterialButton>(R.id.checkoutButton)
         checkoutButton.setOnClickListener {
+            val cardHolder = cardHolderInput.text.toString().trim()
+            val cardNumber = cardNumberInput.text.toString().trim()
+            val expiration = expirationInput.text.toString().trim()
+            val cvv = cvvInput.text.toString().trim()
+            if (cardHolder.isEmpty() || cardNumber.isEmpty() || expiration.isEmpty() || cvv.isEmpty()) {
+                android.widget.Toast.makeText(requireContext(), "Compila tutti i campi della carta", android.widget.Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (cardNumber.length != 16 || !cardNumber.all { it.isDigit() }) {
+                android.widget.Toast.makeText(requireContext(), "Il numero della carta deve essere di 16 cifre", android.widget.Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (!expiration.matches(Regex("\\d{2}/\\d{2}"))) {
+                android.widget.Toast.makeText(requireContext(), "La scadenza deve essere nel formato MM/YY", android.widget.Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } else {
+                val parts = expiration.split("/")
+                val month = parts[0].toIntOrNull()
+                val year = parts[1].toIntOrNull()
+                if (month == null || year == null || month !in 1..12) {
+                    android.widget.Toast.makeText(requireContext(), "Mese di scadenza non valido", android.widget.Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
+            }
+            if (cvv.length != 3 || !cvv.all { it.isDigit() }) {
+                android.widget.Toast.makeText(requireContext(), "Il CVV deve essere di 3 cifre", android.widget.Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             ReservationRepository.draft?.let {
                 ReservationRepository.addReservation(it)
                 ReservationRepository.draft = null
@@ -55,6 +86,10 @@ class PaymentFragment : Fragment() {
                 .replace(R.id.fragment_container, YourReservationsFragment())
                 .addToBackStack(null)
                 .commit()
+        }
+
+        view.findViewById<View>(R.id.back_button)?.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
         }
     }
 } 

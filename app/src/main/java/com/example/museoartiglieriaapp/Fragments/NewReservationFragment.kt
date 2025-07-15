@@ -22,6 +22,10 @@ import java.util.Locale
 import android.widget.DatePicker
 
 class NewReservationFragment : Fragment() {
+    private var selectedTicketType: String? = null
+    private var selectedTime: String? = null
+    private var selectedLocation: String? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,7 +35,35 @@ class NewReservationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val nameInput = view.findViewById<android.widget.EditText>(R.id.nameInput)
+        val emailInput = view.findViewById<android.widget.EditText>(R.id.emailInput)
+        val phoneInput = view.findViewById<android.widget.EditText>(R.id.phoneInput)
         view.findViewById<MaterialButton>(R.id.checkoutButton).setOnClickListener {
+            val name = nameInput.text?.toString()?.trim() ?: ""
+            val email = emailInput.text?.toString()?.trim() ?: ""
+            val phone = phoneInput.text?.toString()?.trim() ?: ""
+            if (name.isEmpty() || email.isEmpty() || phone.isEmpty()) {
+                Toast.makeText(requireContext(), "Compila tutti i campi obbligatori!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (selectedTicketType == null) {
+                Toast.makeText(requireContext(), "Seleziona un tipo di biglietto!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (selectedTime == null) {
+                Toast.makeText(requireContext(), "Seleziona un orario!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (selectedLocation == null) {
+                Toast.makeText(requireContext(), "Seleziona un museo!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            val datePicker = view.findViewById<DatePicker>(R.id.date_picker)
+            val selectedDate = getSelectedDate(datePicker)
+            if (selectedDate.isEmpty()) {
+                Toast.makeText(requireContext(), "Seleziona una data!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, PaymentFragment())
                 .addToBackStack(null)
@@ -75,10 +107,6 @@ class NewReservationFragment : Fragment() {
             t1?.setTextColor(textColorSelected)
             t2?.setTextColor(textColorSelected)
         }
-
-        var selectedTicketType: String? = null
-        var selectedTime: String? = null
-        var selectedLocation: String? = null
 
         for ((i, card) in cards.withIndex()) {
             card.setOnClickListener {

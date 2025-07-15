@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".PaymentFragment">
 
     <ScrollView
@@ -37,7 +38,7 @@
 
                 <TextView
                     android:id="@+id/title"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Reservation"
                     android:textAlignment="center"
@@ -45,10 +46,10 @@
                     android:textSize="15sp"
                     android:textStyle="bold"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/back_button"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="@id/back_button"
-                    app:layout_constraintHorizontal_bias="0.5" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
@@ -138,7 +139,7 @@
                         android:textSize="16sp"
                         android:layout_marginTop="8dp"
                         android:inputType="number"
-                        android:maxLength="4" />
+                        android:maxLength="5" />
                 </LinearLayout>
 
                 <Space

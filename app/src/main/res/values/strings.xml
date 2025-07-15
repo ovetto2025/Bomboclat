@@ -76,6 +76,22 @@
     <string name="email_segrmuseoart">segrmuseoart@cmeteo.esercito.difesa.it</string>
     <string name="email_infomuseoart">infomuseoart@gmail.com</string>
     <string name="institutional_address_long">Corso G. Ferraris, 2, 10121 Torino</string>
+    <string name="mappa_zoommabile">Mappa zoommabile</string>
+    <string name="chiudi">Chiudi</string>
+    <string name="corso_lecce_10_torino_10143">Corso Lecce 10, Torino 10143</string>
+    <string name="corso_g_ferraris_2_torino_10121">Corso G. Ferraris 2, Torino 10121</string>
+    <string name="find_the_right_ticket_for_you">Find the right ticket for you</string>
+    <string name="single">Single</string>
+    <string name="_10">10$</string>
+    <string name="family">Family</string>
+    <string name="_30">30$</string>
+    <string name="vip">VIP</string>
+    <string name="_25">25$</string>
+    <string name="name_and_surname">Name and Surname</string>
+    <string name="email_address">Email address</string>
+    <string name="phone_number1">Phone number</string>
+    <string name="checkout">Checkout</string>
+    <string name="please_make_sure_all_the_entered_informations_are_correct">Please make sure all the entered informations are correct</string>
 
 </resources>
 

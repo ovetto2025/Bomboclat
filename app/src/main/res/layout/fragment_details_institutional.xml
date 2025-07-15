@@ -167,6 +167,19 @@
                 app:layout_constraintTop_toBottomOf="@+id/guide_map_title"
                 android:contentDescription="Guide Map" />
 
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/ttsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_btn_speak_now"
+                android:contentDescription="Leggi informazioni"
+                app:layout_constraintTop_toTopOf="@id/header_image"
+                app:layout_constraintEnd_toEndOf="@id/header_image"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/white"
+                android:tint="@color/black"
+                />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

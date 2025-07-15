@@ -13,6 +13,8 @@ import org.json.JSONObject
 import android.content.Context
 import com.bumptech.glide.Glide
 import com.example.museoartiglieriaapp.Models.PortableFirearm
+import android.speech.tts.TextToSpeech
+import java.util.Locale
 
 data class ArtifactDetails(
     val technical_specifications: Map<String, @JvmSuppressWildcards Any>?,
@@ -69,6 +71,8 @@ class PortableFirearmDetailFragment : Fragment() {
         "NKM" to "https://aboutww2militaria.com/image/cache/data/Nov15/nr40-combat-knife-scout-reconnaissance-zik-1942-600x600.JPG"
     )
 
+    private var tts: TextToSpeech? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         firearm = arguments?.getParcelable(ARG_FIREARM)
@@ -91,6 +95,7 @@ class PortableFirearmDetailFragment : Fragment() {
         val triviaText = view.findViewById<TextView>(R.id.trivia_text)
         val specsText = view.findViewById<TextView>(R.id.specs_text)
         val historyText = view.findViewById<TextView>(R.id.history_text)
+        val ttsButton = view.findViewById<View>(R.id.ttsButton)
 
         firearm?.let {
             val imageUrl = artifactImageUrls[it.name]
@@ -136,5 +141,32 @@ class PortableFirearmDetailFragment : Fragment() {
                 historyText.visibility = if (historyText.visibility == View.VISIBLE) View.GONE else View.VISIBLE
             }
         }
+
+        tts = TextToSpeech(requireContext()) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                tts?.language = Locale.ITALIAN
+            }
+        }
+
+        ttsButton.setOnClickListener {
+            firearm?.let {
+                val info = StringBuilder()
+                info.append("Nome: ${it.name}. ")
+                info.append("Origine: ${it.origin}. ")
+                info.append("Anno di produzione: ${it.yearOfProduction}. ")
+                info.append("Utilizzo storico: ${it.historicalUse}. ")
+                info.append("Prima apparizione: ${it.firstAppearance}. ")
+                if (it.trivia.isNotBlank()) info.append("Curiosità: ${it.trivia}. ")
+                if (it.technicalSpecifications.isNotBlank()) info.append("Specifiche tecniche: ${it.technicalSpecifications}. ")
+                if (it.briefHistory.isNotBlank()) info.append("Breve storia: ${it.briefHistory}.")
+                tts?.speak(info.toString(), TextToSpeech.QUEUE_FLUSH, null, null)
+            }
+        }
+    }
+
+    override fun onDestroyView() {
+        tts?.stop()
+        tts?.shutdown()
+        super.onDestroyView()
     }
 } 

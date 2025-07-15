@@ -257,7 +257,7 @@
                                 android:id="@+id/location1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Corso Lecce 10, Torino 10143"
+                                android:text="@string/corso_lecce_10_torino_10143"
                                 android:textColor="#444222"
                                 android:textStyle="bold"
                                 android:textSize="18sp"
@@ -269,7 +269,7 @@
                                 android:id="@+id/location2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Corso G. Ferraris 2, Torino 10121"
+                                android:text="@string/corso_g_ferraris_2_torino_10121"
                                 android:textColor="#444222"
                                 android:textStyle="bold"
                                 android:textSize="18sp"
@@ -286,7 +286,7 @@
                         android:layout_marginBottom="32dp"
                         android:gravity="center_horizontal"
                         android:lineSpacingExtra="8dp"
-                        android:text="Find the right ticket for you"
+                        android:text="@string/find_the_right_ticket_for_you"
                         android:textColor="#3D3B36"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -321,7 +321,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Single"
+                                android:text="@string/single"
                                 android:textColor="#3D3B36"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -330,7 +330,7 @@
                                 android:id="@+id/card_single_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="25$"
+                                android:text="@string/_10"
                                 android:textColor="#3D3B36"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
@@ -367,7 +367,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Family"
+                                android:text="@string/family"
                                 android:textColor="#3D3B36"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -376,7 +376,7 @@
                                 android:id="@+id/card_family_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="50$"
+                                android:text="@string/_30"
                                 android:textColor="#3D3B36"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
@@ -412,7 +412,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="VIP"
+                                android:text="@string/vip"
                                 android:textColor="#3D3B36"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -421,7 +421,7 @@
                                 android:id="@+id/card_vip_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="30$"
+                                android:text="@string/_25"
                                 android:textColor="#3D3B36"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
@@ -433,7 +433,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="32dp"
-                        android:text="Name and Surname"
+                        android:text="@string/name_and_surname"
                         android:textColor="#444222"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -454,7 +454,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
-                        android:text="Email address"
+                        android:text="@string/email_address"
                         android:textColor="#444222"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -475,7 +475,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
-                        android:text="Phone number"
+                        android:text="@string/phone_number1"
                         android:textColor="#444222"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -497,7 +497,7 @@
                         android:layout_height="60dp"
                         android:layout_marginTop="36dp"
                         android:backgroundTint="#5E5C37"
-                        android:text="Checkout"
+                        android:text="@string/checkout"
                         android:textColor="#FFFFFF"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -509,7 +509,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="32dp"
-                        android:text="Please make sure all the entered informations are correct"
+                        android:text="@string/please_make_sure_all_the_entered_informations_are_correct"
                         android:textAlignment="center"
                         android:textColor="#AAAAAA"
                         android:textSize="15sp" />
