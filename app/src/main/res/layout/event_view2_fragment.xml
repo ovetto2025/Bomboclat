@@ -29,18 +29,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/ttsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_btn_speak_now"
-        android:contentDescription="Leggi informazioni"
-        android:layout_gravity="top|right"
-        android:layout_margin="12dp"
-        android:backgroundTint="@color/white"
-        android:tint="@color/black"
-        />
-
     <LinearLayout
         android:layout_marginTop="100dp"
         android:layout_width="match_parent"
@@ -63,21 +51,22 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="24dp"> <TextView
-                android:id="@+id/event_title"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
-                android:text="@string/event2_title_text"
-                android:textColor="@color/event_title_color"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center_horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:paddingBottom="24dp">
+                <TextView
+                    android:id="@+id/event_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/event2_title_text"
+                    android:textColor="@color/event_title_color"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/event_subtitle"
@@ -130,6 +119,18 @@
                             android:textSize="14sp" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
+
+                <ImageButton
+                    android:id="@+id/ttsButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_btn_speak_now"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Leggi informazioni"
+                    app:layout_constraintStart_toEndOf="@id/date_card"
+                    app:layout_constraintTop_toTopOf="@id/date_card"
+                    app:layout_constraintBottom_toBottomOf="@id/date_card"
+                    android:layout_marginStart="8dp"/>
 
                 <TextView
                     android:id="@+id/event_description_part1"

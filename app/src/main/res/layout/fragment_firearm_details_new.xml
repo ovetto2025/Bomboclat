@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-50dp"
             android:padding="12dp"
-            android:text="M91"
+            android:text="ARTEFATTO"
             android:textColor="@color/white"
             android:textSize="50sp"
             android:textStyle="bold"

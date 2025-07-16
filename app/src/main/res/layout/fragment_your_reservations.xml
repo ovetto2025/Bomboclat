@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back_home">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="12dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_arrow_back"
+        android:contentDescription="Torna indietro"/>
+
+    <TextView
+        android:id="@+id/yourReservationsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Reservations"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reservationsRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false"/>
 
-</FrameLayout> 
+</LinearLayout> 

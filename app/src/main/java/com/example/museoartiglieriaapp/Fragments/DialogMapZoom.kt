@@ -25,7 +25,23 @@ class DialogMapZoom(private val imageResId: Int) : DialogFragment() {
         val imageView = view.findViewById<ImageView>(R.id.zoomedMapImage)
         val closeButton = view.findViewById<ImageButton>(R.id.closeButton)
         imageView.setImageResource(imageResId)
-        imageView.imageMatrix = matrix
+        imageView.post {
+            // Calcolo la traslazione per centrare l'immagine
+            val drawable = imageView.drawable
+            if (drawable != null) {
+                val viewWidth = imageView.width.toFloat()
+                val viewHeight = imageView.height.toFloat()
+                val imageWidth = drawable.intrinsicWidth.toFloat()
+                val imageHeight = drawable.intrinsicHeight.toFloat()
+                val scale = minOf(viewWidth / imageWidth, viewHeight / imageHeight)
+                val dx = (viewWidth - imageWidth * scale) / 2f
+                val dy = (viewHeight - imageHeight * scale) / 2f
+                matrix.setScale(scale, scale)
+                matrix.postTranslate(dx, dy)
+                imageView.imageMatrix = matrix
+                scaleFactor = scale
+            }
+        }
         imageView.setOnTouchListener { v, event ->
             scaleGestureDetector?.onTouchEvent(event)
             v.performClick()

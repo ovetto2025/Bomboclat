@@ -27,7 +27,13 @@
         <item name="android:textColorPrimaryInverse">@color/white</item>
         <!-- Colore del testo per il giorno della settimana nell'header -->
         <item name="android:textColorSecondaryInverse">@color/white</item>
+        <!-- Colore di selezione per il giorno/anno/mese -->
+        <item name="android:datePickerDialogTheme">@style/CustomDatePickerDialog</item>
     </style>
 
+    <style name="CustomDatePickerDialog" parent="android:Theme.Material.Light.Dialog">
+        <item name="colorAccent">@color/date_picker_selected_bg</item>
+        <item name="android:colorAccent">@color/date_picker_selected_bg</item>
+    </style>
 
 </resources>
