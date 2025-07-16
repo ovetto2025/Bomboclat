@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_gray">#2C2C2C</color>
+    <color name="button_background">#75828D</color>
+    <color name="transparent_black_gradient_start">#00000000</color>
+    <color name="transparent_black_gradient_end">#CC000000</color>
+    <color name="bottom_nav_background">#333333</color>
+    <color name="bottom_nav_item_color">#CCCCCC</color>
+    <color name="bottom_nav_item_selected_color">#FFFFFF</color>
+    <color name="fab_background_color">#FFFFFF</color>
+    <color name="fab_icon_color">#000000</color>
+    <color name="event_background_tint">#30000000</color>
+    <color name="card_background">#E6FFFFFF</color>
+    <color name="card_border">#B3FFFFFF</color>
+    <color name="event_title_color">#424242</color>
+    <color name="event_subtitle_color">#616161</color>
+    <color name="event_description_color">#424242</color>
+    <color name="date_card_background">#424242</color>
+    <color name="date_card_text_color">#FFFFFF</color>
+    <color name="overlay">#66000000</color>
+    <color name="button_time_selector"> #555234 </color>
+    <color name="colorPrimary">#5E5C37</color>
+    <color name="grey_button_background">#D3D3D3</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- Colori personalizzati per l'app -->
+    <color name="app_primary_green">#5E5C37</color>
+    <color name="app_button_default_grey">#D3D3D3</color>
+    <color name="app_text_color_on_primary">#FFFFFF</color>
+    <color name="app_text_color_default">#000000</color>
+    <color name="app_card_background_default">#D3D3D3</color>
+    <color name="app_card_background_selected">#C0E0C0</color>
+    <color name="app_form_input_background">#E0E0E0</color>
+    <color name="app_text_label">#444222</color>
+    <color name="app_background_color">#555234</color>
+    <color name="app_title_text_color">#000000</color>
+    <color name="app_card_times_background">#FFFFFF</color>
+    <color name="app_dropdown_background">#DDDDDD</color>
+    <color name="app_dropdown_text_color">#444222</color>
+    <color name="app_note_text_color">#AAAAAA</color>
+    <color name="calendar_background_white">#FFFFFF</color>
+    <color name="calendar_text_green">@color/app_primary_green</color>
+    <color name="calendar_selected_day_background_green">@color/app_primary_green</color>
+    <color name="calendar_selected_day_text_white">@color/white</color>
+
+</resources>

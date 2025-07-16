@@ -1,0 +1,384 @@
+{
+  "MARK_I": {
+    "category": "tank",
+    "technical_specifications": {
+      "weight": "26 tons",
+      "crew": "8 men",
+      "speed": "4 mph (road)",
+      "range": "~25 miles",
+      "engine": "105 hp Daimler petrol",
+      "armor": "6–12 mm",
+      "armament": {
+        "male_variant": "2 × 57 mm guns + 4 machine guns",
+        "female_variant": "6 machine guns"
+      }
+    },
+    "trivia": [
+      "The term 'tank' was used to deceive spies.",
+      "The interior was toxic and infernal: hot, noisy, and filled with fumes.",
+      "Only about a third of the tanks in the first battle operated effectively."
+    ],
+    "brief_history": "The Mark I was the first tank ever used in battle. Developed by the United Kingdom to overcome the trenches and barbed wire of trench warfare, it broke the stalemate on the Western Front. Despite mechanical and logistical challenges, it forever changed land warfare, paving the way for armored warfare in the 20th century."
+  },
+  "PANZER_IV": {
+    "category": "tank",
+    "technical_specifications": {
+      "weight": "25 tons",
+      "crew": "5 men",
+      "speed": "40 km/h (25 mph)",
+      "range": "~200 km (124 mi)",
+      "engine": "300 hp Maybach HL 120",
+      "armor": "up to 80 mm",
+      "armament": "75 mm KwK 40 gun + 2 x MG34"
+    },
+    "trivia": [
+      "Over 8,500 units were built.",
+      "Its long-barrel gun could destroy most Allied tanks by mid-war.",
+      "It served until the 1960s in some countries."
+    ],
+    "brief_history": "The Panzer IV was the backbone of the German armored forces during WWII. Initially a support tank, it was continually upgraded to face newer Allied designs. It fought on all major fronts, from France to the Eastern Front. Its adaptability and ease of production made it the most produced German tank of the war. Later models featured stronger guns and armor to counter Soviet T-34s."
+  },
+  "T-34/85": {
+    "category": "tank",
+    "technical_specifications": {
+      "weight": "32 tons",
+      "crew": "5 men",
+      "speed": "55 km/h (34 mph)",
+      "range": "~300 km (186 mi)",
+      "engine": "500 hp diesel",
+      "armor": "up to 75 mm",
+      "armament": "85 mm ZiS-S-53 gun + MG"
+    },
+    "trivia": [
+      "Over 22,000 units were built during WWII.",
+      "Used by over 40 countries postwar.",
+      "Still seen in use in some conflict zones today."
+    ],
+    "brief_history": "An improved version of the revolutionary T-34, the T-34/85 could finally match German Tigers and Panthers. Its mix of firepower, armor, and mobility made it the Red Army's top tank late in the war. The T-34/85 helped secure Soviet victory in Eastern Europe and became a symbol of Soviet military strength. Its design heavily influenced post-war armored doctrines."
+  },
+  "TIGER_I": {
+    "category": "tank",
+    "technical_specifications": {
+      "weight": "57 tons",
+      "crew": "5 men",
+      "speed": "38 km/h (24 mph)",
+      "range": "~195 km (121 mi)",
+      "engine": "Maybach HL230, 7070 hp",
+      "armor": "up to 120 mm",
+      "armament": "88 mm KwK 36 gun + MG"
+    },
+    "trivia": [
+      "Only about 1,350 were produced.",
+      "Feared by Allied tank crews.",
+      "Required extensive maintenance and fuel."
+    ],
+    "brief_history": "The Tiger I was designed to dominate Allied armor with its powerful 88 mm gun and thick armor. It was nearly invulnerable from the front, but complex and prone to mechanical failure. It became a legendary tank, feared for its killing power, especially in open battle. However, its limited numbers and high cost hindered Germany's ability to mass-deploy it."
+  },
+  "IS-2": {
+    "category": "tank",
+    "technical_specifications": {
+      "weight": "46 tons",
+      "crew": "4 men",
+      "speed": "37 km/h (23 mph)",
+      "range": "~240 km (149 mi)",
+      "engine": "V-2IS diesel, 600 hp",
+      "armor": "up to 120 mm",
+      "armament": "122 mm D-25T gun + MG"
+    },
+    "trivia": [
+      "The 122 mm shells were devastating but slow to reload.",
+      "Played a key role in the Battle of Berlin.",
+      "Named after Joseph Stalin."
+    ],
+    "brief_history": "Designed to destroy German heavy tanks and fortifications, the IS-2 was the Soviet Union's most powerful tank of the war. Its massive 122 mm gun was deadly against armor and bunkers. The IS-2 led the charge into Berlin in 1945, symbolizing Soviet strength. Post-war, it was gradually replaced but remained in service for decades in allied nations."
+  },
+  "M13/40": {
+    "category": "tank",
+    "technical_specifications": {
+      "weight": "13.5 tons",
+      "crew": "4 men",
+      "speed": "32 km/h (20 mph)",
+      "range": "~200 km (124 mi)",
+      "engine": "Diesel SPA 125 hp",
+      "armor": "up to 42 mm",
+      "armament": "47 mm gun + MGs"
+    },
+    "trivia": [
+      "Weak armor and low reliability plagued it.",
+      "Some were captured and reused by Allies.",
+      "The first Italian tank with a rotating turret and radio."
+    ],
+    "brief_history": "The M13/40 was Italy's most common tank during WWII. It was outmatched by British and American designs, but served throughout the North African campaign. Its performance was limited by poor armor and firepower, but it represented Italy's effort to modernize its armored forces. Some were captured and reused by both Allies and Axis forces."
+  },
+  "M1934": {
+    "category": "pistol",
+    "technical_specifications": {
+      "caliber": "9 mm Corto (.380 ACP)",
+      "weight": "600 g (1.3 lbs)",
+      "magazine_capacity": "7 rounds",
+      "action": "Blowback, semi-automatic",
+      "effective_range": "~50 m (55 yd)"
+    },
+    "trivia": [
+      "The M1934 remained in Italian service well into the 1980s.",
+      "It was manufactured under license in several countries.",
+      "Despite its small caliber, it was praised for accuracy and handling."
+    ],
+    "brief_history": "The Beretta M1934 was widely issued to Italian forces during World War II. Known for its compact size and reliability, it was also used by police and paramilitary units in Italy and abroad. Its simple design made it easy to maintain even in harsh battlefield conditions. Post-war, it continued to serve many countries as a standard sidearm."
+  },
+  "M91": {
+    "category": "rifle",
+    "technical_specifications": {
+      "caliber": "6.5×52mm Carcano",
+      "weight": "4.1 kg (9 lbs)",
+      "magazine_capacity": "6 rounds (internal)",
+      "action": "Bolt-action",
+      "effective_range": "~300 m (328 yd)"
+    },
+    "trivia": [
+      "Infamously associated with the assassination of JFK, as the Carcano M91 was the rifle used.",
+      "It was one of the first rifles to use a clip-loaded magazine system.",
+      "Production lasted until the late 1940s with several updates."
+    ],
+    "brief_history": "The Carcano M91 rifle served as the backbone of Italian infantry for over 50 years. Its design influenced many variants and was Italy's primary infantry rifle through two world wars. Despite criticism over its stopping power, it was valued for its accuracy and ruggedness. The rifle also saw limited use in other countries post-WWII."
+  },
+  "M91/30": {
+    "category": "rifle",
+    "technical_specifications": {
+      "caliber": "7.62×54mmR",
+      "weight": "4.0 kg (8.8 lbs)",
+      "magazine_capacity": "5 rounds (internal)",
+      "action": "Bolt-action",
+      "effective_range": "~500 m (547 yd)"
+    },
+    "trivia": [
+      "Over 37 million Mosin-Nagants were produced in various models.",
+      "It was often used with a PU sniper scope variant.",
+      "Many remain in civilian hands worldwide due to surplus sales."
+    ],
+    "brief_history": "One of the most widely produced military rifles in history, the Mosin-Nagant M91/30 was famed for its durability and accuracy under harsh conditions. It played a decisive role on the Eastern Front of WWII and was widely distributed to Soviet allies. Its design remained largely unchanged for decades, attesting to its effectiveness."
+  },
+  "M1A1": {
+    "category": "submachine_gun",
+    "technical_specifications": {
+      "caliber": ".45 ACP",
+      "weight": "4.8 kg (10.6 lbs)",
+      "magazine_capacity": "20 or 30 rounds",
+      "action": "Blowback, automatic/submachine gun",
+      "effective_range": "~50 m (55 yd)"
+    },
+    "trivia": [
+      "Nicknamed the 'Tommy Gun' or 'Chicago Typewriter.'",
+      "It was notorious for its high rate of fire and distinctive sound.",
+      "Still popular among collectors and in period films."
+    ],
+    "brief_history": "Famous for use in WWII and by gangsters during the Prohibition, the Tommy Gun combined high fire rate with portability and ruggedness. It was highly regarded by soldiers for close-quarter combat. The weapon's distinctive profile made it a symbol of American military and popular culture."
+  },
+  "STEN_GUN": {
+    "category": "submachine_gun",
+    "technical_specifications": {
+      "caliber": "9×19mm Parabellum",
+      "weight": "3.2 kg (7.1 lbs)",
+      "magazine_capacity": "32 rounds",
+      "action": "Blowback, open bolt",
+      "effective_range": "~100 m (110 yd)"
+    },
+    "trivia": [
+      "Produced in over four million units during WWII.",
+      "Known for jamming issues but easy field maintenance.",
+      "Used extensively by resistance groups in occupied Europe."
+    ],
+    "brief_history": "Designed for mass production under wartime constraints, the Sten was cheap, easy to manufacture, and widely issued to British and Commonwealth forces. Despite some reliability issues, it was praised for its simplicity and effectiveness in guerrilla warfare and urban combat. Its design influenced many postwar submachine guns."
+  },
+  "MP40": {
+    "category": "submachine_gun",
+    "technical_specifications": {
+      "caliber": "9×19mm Parabellum",
+      "weight": "3.97 kg (8.75 lbs)",
+      "magazine_capacity": "32 rounds",
+      "action": "Blowback, open bolt",
+      "effective_range": "~100 m (110 yd)"
+    },
+    "trivia": [
+      "Often called 'Schmeisser' though designed by Heinrich Vollmer.",
+      "It had a relatively low rate of fire to improve control.",
+      "Its design inspired many postwar submachine guns."
+    ],
+    "brief_history": "The MP40 was the most recognizable German SMG of WWII, known for its folding stock and use by paratroopers and infantry alike. It was designed for ease of use and mass production, becoming an icon of German infantry firepower. Its influence persists in modern SMG designs worldwide."
+  },
+  "HELMET": {
+    "category": "helmet",
+    "technical_specifications": {
+      "material": "Steel",
+      "weight": "~1.1 kg (2.4 lbs)",
+      "design": "Rounded shell with crest on top",
+      "protection": "Shrapnel and debris protection"
+    },
+    "trivia": [
+      "Named after French Minister of War, Adolphe Adrian.",
+      "Lightweight but offered limited protection compared to later helmets.",
+      "Many variations and color schemes existed for different branches."
+    ],
+    "brief_history": "Originally designed by the French in 1915, the Adrian helmet was adopted by the Italian Army during WWI. It was one of the first standardized steel helmets used to protect soldiers from shrapnel and head injuries. Its design was influential and used by many Allied countries."
+  },
+  "M33": {
+    "category": "uniform",
+    "technical_specifications": {
+      "material": "Wool or cotton",
+      "components": "Tunic, trousers, M33 helmet",
+      "features": "Minimalist, branch-specific badges"
+    },
+    "trivia": [
+      "Paired with the distinctive M33 helmet.",
+      "Often reused or modified after the war.",
+      "Inspired later postwar uniforms in Italy."
+    ],
+    "brief_history": "The M33 uniform, worn during Italy's colonial wars and WWII, reflected Italian military aesthetics and industrial constraints. Though practical in temperate climates, it fared poorly in desert and alpine conditions."
+  },
+  "SS_COAT": {
+    "category": "uniform",
+    "technical_specifications": {
+      "material": "Wool, later synthetic blends",
+      "color": "Black (ceremonial), field grey (combat)",
+      "features": "High collar, SS insignia"
+    },
+    "trivia": [
+      "Designed by Hugo Boss's company.",
+      "Runes and symbols were strictly regulated.",
+      "Ceremonial uniforms were discontinued mid-war."
+    ],
+    "brief_history": "The SS uniform was designed for intimidation and identity. Early versions used black wool with skull insignia, while later combat versions adopted subdued tones. It was both functional and symbolic of Nazi ideology. Highly regulated in appearance, the SS coat was central to the image of elite German units, though practicality in the field forced revisions and simplification during the war."
+  },
+  "M1": {
+    "category": "helmet",
+    "technical_specifications": {
+      "material": "Steel with liner",
+      "weight": "~1.5 kg",
+      "design": "Deep bowl with adjustable straps"
+    },
+    "trivia": [
+      "Over 22 million produced.",
+      "Served into the 1980s.",
+      "Sometimes doubled as a cooking pot."
+    ],
+    "brief_history": "The M1 helmet replaced the M1917 and became the most recognizable U.S. headgear of the 20th century. Its ergonomic design and two-part construction offered durability, comfort, and adaptability across decades. Used by millions of American troops, it was a symbol of the GI and served in almost every theater of war. Variants of the M1 continued service in allied armies long after WWII."
+  },
+  "BRODIE": {
+    "category": "helmet",
+    "technical_specifications": {
+      "material": "Steel (Hadfield)",
+      "weight": "~1.1 kg",
+      "design": "Shallow dome, wide brim"
+    },
+    "trivia": [
+      "Known in the US as the M1917.",
+      "Sometimes called 'tin hat.'",
+      "Later replaced by the Mk III Turtle."
+    ],
+    "brief_history": "The Brodie helmet, or 'shrapnel helmet,' was Britain's response to trench warfare's deadly overhead bursts. Its design protected mainly from falling debris. Used throughout both World Wars with minor updates, it became a symbol of the British soldier—'the Tommy'—especially on the Western Front and during the Blitz."
+  },
+  "USHANKA": {
+    "category": "helmet",
+    "technical_specifications": {
+      "material": "Wool/fur or synthetic fleece",
+      "color": "Grey, brown, or black",
+      "features": "Ear flaps, cloth ties"
+    },
+    "trivia": [
+      "Often bore the red star emblem.",
+      "Sometimes issued in artificial fur.",
+      "Still used in modern Russia and Belarus."
+    ],
+    "brief_history": "The Ushanka was introduced to protect Soviet troops from the brutal winter. With fold-down ear flaps and thick insulation, it became essential on the Eastern Front. Beyond function, it became a cultural symbol of the Red Army and Soviet identity, still used in military and ceremonial uniforms today."
+  },
+  "LEBEL": {
+    "category": "bayonet",
+    "technical_specifications": {
+      "length": "52 cm (20.5 in)",
+      "blade": "Cruciform, no edge",
+      "weight": "~620 g",
+      "material": "Blued steel"
+    },
+    "trivia": [
+      "Nicknamed 'Rosalie' by French soldiers.",
+      "Some blades were repurposed into fighting knives.",
+      "Considered too long for trench warfare."
+    ],
+    "brief_history": "The Épée-Baïonnette Modèle 1886, known simply as 'Lebel,' was a French bayonet designed for thrusting, not slashing. Its cruciform blade made wounds hard to treat, drawing criticism. It was issued en masse in WWI, remaining in use into WWII. Often modified or shortened in the interwar years, it remains one of history's longest standard bayonets."
+  },
+  "SEITENGEWEHR": {
+    "category": "bayonet",
+    "technical_specifications": {
+      "length": "~50 cm (19.7 in)",
+      "blade": "Single-edged",
+      "weight": "~500–600 g",
+      "material": "Steel, wood grips"
+    },
+    "trivia": [
+      "Sawback blades were feared and controversial.",
+      "Late-war versions were simplified to save materials.",
+      "Still used ceremonially today."
+    ],
+    "brief_history": "'Seitengewehr' (literally 'sidearm') bayonets were issued to German troops alongside Mauser rifles. Models evolved, but all featured robust blades for close combat and rifle mounting. Used in both world wars, they symbolized German military efficiency and were often customized by troops. Some had sawback versions for engineers."
+  },
+  "M1891": {
+    "category": "bayonet",
+    "technical_specifications": {
+      "length": "~42 cm (16.5 in)",
+      "blade": "Straight, double-edged or single",
+      "weight": "~450–500 g",
+      "material": "Steel blade, brass or wood grips"
+    },
+    "trivia": [
+      "Some models had folding blades for cavalry.",
+      "Shortened versions were common in WWII.",
+      "Collectors value early brass-hilt variants."
+    ],
+    "brief_history": "Designed for the Carcano Mod. 91 rifle, this bayonet was a versatile tool for Italian infantry. It came in various forms—fixed or folding—and was adapted over decades. It saw use in colonial wars, WWI, and WWII, remaining in service into the postwar era. Its design influenced later military knives and parade models."
+  },
+  "1907": {
+    "category": "bayonet",
+    "technical_specifications": {
+      "length": "55 cm (21.7 in)",
+      "blade": "Straight, fullered",
+      "weight": "~600–650 g",
+      "material": "Carbon steel"
+    },
+    "trivia": [
+      "Inspired by the Japanese Arisaka bayonet.",
+      "Reused by Indian and Australian forces.",
+      "Many were cut down to knife-length postwar."
+    ],
+    "brief_history": "The Pattern 1907 bayonet was designed for use with the Short Magazine Lee-Enfield rifle. Its long blade was suited for trench fighting and mass infantry tactics. It remained the standard British bayonet through both world wars, sometimes reissued with updated grips or shorter blades."
+  },
+  "M3": {
+    "category": "knife",
+    "technical_specifications": {
+      "length": "29 cm (11.5 in)",
+      "blade": "Double-edged, stiletto-style",
+      "weight": "~300 g",
+      "material": "Steel, leather-wrapped grip"
+    },
+    "trivia": [
+      "Issued with M6 leather sheath.",
+      "Often carried by airborne troops.",
+      "Later became a collectors' item."
+    ],
+    "brief_history": "The M3 Fighting Knife was developed for U.S. paratroopers and commandos during WWII. Slim, lightweight, and effective in close combat, it was preferred in trench raids and night ops. The M3's success led to its transformation into the M4 bayonet and influenced later combat knives like the M7 and M9."
+  },
+  "NKM": {
+    "category": "bayonet",
+    "technical_specifications": {
+      "length": "~38 cm (15 in)",
+      "blade": "Triangular spike",
+      "weight": "~450 g",
+      "material": "Hardened steel"
+    },
+    "trivia": [
+      "Non-edged — only for stabbing.",
+      "Affixed using a socket mount.",
+      "Rarely removed in combat."
+    ],
+    "brief_history": "The NKM-type spike bayonet, issued with the Mosin-Nagant rifles, was a simple but deadly thrusting weapon. Permanently affixed in many cases, it was never meant for slashing. Its simplicity made it cheap to produce, and it doubled as a multi-use tool. Some Soviet troops used it as a pry bar or tent peg in the field."
+  }
+}

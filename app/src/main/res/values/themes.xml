@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MuseoArtiglieriaApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.MuseoArtiglieriaApp" parent="Base.Theme.MuseoArtiglieriaApp" />
+
+    <style name="TopRoundedCardShape" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="CustomDatePickerStyle"
+        parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <!-- Colore del testo per i giorni del mese -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!-- Colore del testo per l'header (giorno della settimana, mese, anno) se necessario -->
+        <item name="android:textColorSecondary">@color/white</item>
+        <!-- Colore dei controlli (frecce, etc.) se necessario -->
+        <item name="colorControlNormal">@color/white</item>
+        <!-- Colore del testo per l'anno selezionato nell'header -->
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <!-- Colore del testo per il giorno della settimana nell'header -->
+        <item name="android:textColorSecondaryInverse">@color/white</item>
+    </style>
+
+
+</resources>

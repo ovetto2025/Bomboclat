@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.DetailsMuseumFragment"
+    android:background="@color/black">
+
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="70dp">
+
+           <ImageView
+               android:id="@+id/header_image"
+               android:layout_width="0dp"
+               android:layout_height="250dp"
+               android:scaleType="centerCrop"
+               android:src="@drawable/museum_details_back"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               android:contentDescription="@string/museum_header_description" />
+           <ImageButton
+
+               android:id="@+id/close_button"
+               android:layout_width="48dp"
+               android:layout_height="48dp"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="16dp"
+               android:background="?attr/selectableItemBackgroundBorderless"
+               android:contentDescription="@string/close_button_description"
+               android:src="@drawable/close_btn"
+               app:tint="@color/white"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <View
+               android:id="@+id/gradient_overlay"
+               android:layout_width="0dp"
+               android:layout_height="120dp"
+               android:background="@drawable/overlay"
+               app:layout_constraintBottom_toBottomOf="@id/header_image"
+               app:layout_constraintEnd_toEndOf="@id/header_image"
+               app:layout_constraintStart_toStartOf="@id/header_image" />
+
+           <TextView
+               android:id="@+id/museum_title"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="24dp"
+               android:layout_marginEnd="24dp"
+               android:layout_marginBottom="8dp"
+               android:text="@string/museum_storage_title"
+               android:textColor="@color/white"
+               android:textSize="32sp"
+               android:textStyle="bold"
+               app:layout_constraintBottom_toTopOf="@+id/museum_address"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent" />
+
+           <TextView
+               android:id="@+id/museum_address"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="24dp"
+               android:layout_marginEnd="24dp"
+               android:layout_marginBottom="16dp"
+               android:text="@string/museum_address"
+               android:textColor="@color/white"
+               android:textSize="20sp"
+               app:layout_constraintBottom_toBottomOf="@id/header_image"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent" />
+
+           <TextView
+               android:id="@+id/description_part1"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="24dp"
+               android:layout_marginTop="24dp"
+               android:layout_marginEnd="24dp"
+               android:text="@string/description_part1"
+               android:textColor="@color/white"
+               android:textSize="20sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/header_image" />
+
+           <TextView
+               android:id="@+id/description_part2"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="24dp"
+               android:layout_marginTop="16dp"
+               android:layout_marginEnd="24dp"
+               android:text="@string/description_part2"
+               android:textColor="@color/white"
+               android:textSize="20sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/description_part1" />
+
+           <TextView
+               android:id="@+id/description_part3"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="24dp"
+               android:layout_marginTop="16dp"
+               android:layout_marginEnd="24dp"
+               android:text="@string/description_part3"
+               android:textColor="@color/white"
+               android:textSize="20sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/description_part2" />
+
+           <TextView
+               android:id="@+id/description_part4"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="24dp"
+               android:layout_marginTop="16dp"
+               android:layout_marginEnd="24dp"
+               android:text="@string/description_part4"
+               android:textColor="@color/white"
+               android:textSize="20sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/description_part3" />
+
+           <Button
+               android:id="@+id/visit_archive_button"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="24dp"
+               android:layout_marginTop="32dp"
+               android:layout_marginEnd="24dp"
+               android:backgroundTint="#75828D"
+               android:paddingVertical="12dp"
+               android:text="@string/visit_archive_button_text"
+               android:textColor="@color/white"
+               android:textSize="16sp"
+               android:textStyle="bold"
+               app:cornerRadius="8dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/description_part4" />
+
+           <TextView
+               android:id="@+id/guide_map_title"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="24dp"
+               android:layout_marginTop="32dp"
+               android:layout_marginEnd="24dp"
+               android:text="@string/guide_map_title"
+               android:textColor="@color/white"
+               android:textSize="24sp"
+               android:textStyle="bold"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/visit_archive_button" />
+
+           <com.github.chrisbanes.photoview.PhotoView
+               android:id="@+id/guide_map_image"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="24dp"
+               android:layout_marginTop="16dp"
+               android:layout_marginEnd="24dp"
+               android:layout_marginBottom="24dp"
+               android:adjustViewBounds="true"
+               android:scaleType="fitCenter"
+               android:src="@drawable/map_detail_storage"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/guide_map_title"
+               android:contentDescription="@string/guide_map_description" />
+
+           <com.google.android.material.floatingactionbutton.FloatingActionButton
+               android:id="@+id/ttsButton"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@android:drawable/ic_btn_speak_now"
+               android:contentDescription="Leggi informazioni"
+               app:layout_constraintTop_toTopOf="@id/header_image"
+               app:layout_constraintEnd_toEndOf="@id/header_image"
+               android:layout_margin="12dp"
+               android:backgroundTint="@color/white"
+               android:tint="@color/black"
+               />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+   </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
