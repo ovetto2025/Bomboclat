@@ -1,0 +1,40 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    android:id=\"@+id/main_activity_root\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\".Activity.MainActivity\">\n<androidx.coordinatorlayout.widget.CoordinatorLayout\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\">\n    <FrameLayout\n        android:id=\"@+id/fragment_container\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"match_parent\"\n        app:layout_behavior=\"@string/appbar_scrolling_view_behavior\"/>\n    \n    <com.google.android.material.bottomappbar.BottomAppBar\n        android:id=\"@+id/bottom_app_bar\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"64dp\"\n        android:layout_gravity=\"bottom\"\n        android:background=\"@color/bottom_nav_background\"\n        app:fabCradleVerticalOffset=\"0dp\"\n\n        app:fabCradleMargin=\"16dp\"\n        app:contentInsetStart=\"0dp\"\n        app:contentInsetEnd=\"0dp\">\n\n    <com.google.android.material.bottomnavigation.BottomNavigationView\n        android:id=\"@+id/bottom_navigation_view\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"56dp\"\n        android:layout_gravity=\"bottom\"\n        android:background=\"@color/bottom_nav_background\"\n        app:itemIconTint=\"@color/bottom_nav_item_color\"\n        app:itemTextColor=\"@color/bottom_nav_item_color\"\n\n\n        app:labelVisibilityMode=\"unlabeled\"\n        app:itemIconSize=\"24dp\"\n        app:menu=\"@menu/bottom_menu\"\n        android:paddingBottom=\"8dp\" />\n    </com.google.android.material.bottomappbar.BottomAppBar>\n\n    <com.google.android.material.floatingactionbutton.FloatingActionButton\n        android:id=\"@+id/fab_camera\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_gravity=\"bottom|center_horizontal\"\n        android:layout_marginBottom=\"28dp\"\n        android:src=\"@drawable/camera_nav\"\n        android:contentDescription=\"@string/camera_button_description\"\n        app:backgroundTint=\"@color/fab_background_color\"\n        app:tint=\"@color/fab_icon_color\"\n        app:maxImageSize=\"36dp\"/>\n\n</androidx.coordinatorlayout.widget.CoordinatorLayout>\n\n</RelativeLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision 48e1bdbdd069fa1d3b159235ed5c787a98f964d8)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1752487713835)
+@@ -22,7 +22,7 @@
+         android:layout_height="64dp"
+         android:layout_gravity="bottom"
+         android:background="@color/bottom_nav_background"
+-        app:fabCradleVerticalOffset="0dp"
++        app:fabCradleVerticalOffset="20dp"
+ 
+         app:fabCradleMargin="16dp"
+         app:contentInsetStart="0dp"
+@@ -31,17 +31,14 @@
+     <com.google.android.material.bottomnavigation.BottomNavigationView
+         android:id="@+id/bottom_navigation_view"
+         android:layout_width="match_parent"
+-        android:layout_height="56dp"
++        android:layout_height="64dp"
+         android:layout_gravity="bottom"
+         android:background="@color/bottom_nav_background"
+         app:itemIconTint="@color/bottom_nav_item_color"
+-        app:itemTextColor="@color/bottom_nav_item_color"
+-
+-
+         app:labelVisibilityMode="unlabeled"
+-        app:itemIconSize="24dp"
++        app:itemIconSize="40dp"
+         app:menu="@menu/bottom_menu"
+-        android:paddingBottom="8dp" />
++         />
+     </com.google.android.material.bottomappbar.BottomAppBar>
+ 
+     <com.google.android.material.floatingactionbutton.FloatingActionButton

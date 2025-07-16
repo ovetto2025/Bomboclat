@@ -1,0 +1,26 @@
+Index: .idea/deploymentTargetSelector.xml
+===================================================================
+diff --git a/.idea/deploymentTargetSelector.xml b/.idea/deploymentTargetSelector.xml
+deleted file mode 100644
+--- a/.idea/deploymentTargetSelector.xml	(revision 088efb3bf7c7b1e78876a9171969a1b52b674b00)
++++ /dev/null	(revision 088efb3bf7c7b1e78876a9171969a1b52b674b00)
+@@ -1,18 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="deploymentTargetSelector">
+-    <selectionStates>
+-      <SelectionState runConfigName="app">
+-        <option name="selectionMode" value="DROPDOWN" />
+-        <DropdownSelection timestamp="2025-07-15T21:13:22.873870700Z">
+-          <Target type="DEFAULT_BOOT">
+-            <handle>
+-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\aaabb\.android\avd\Pixel_4.avd" />
+-            </handle>
+-          </Target>
+-        </DropdownSelection>
+-        <DialogSelection />
+-      </SelectionState>
+-    </selectionStates>
+-  </component>
+-</project>
+\ No newline at end of file

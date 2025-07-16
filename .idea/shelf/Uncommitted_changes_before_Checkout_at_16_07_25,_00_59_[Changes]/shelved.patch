@@ -1,0 +1,312 @@
+Index: app/src/main/java/com/example/museoartiglieriaapp/Fragments/HomeFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.museoartiglieriaapp.Fragments\n\nimport android.os.Bundle\nimport android.view.LayoutInflater\nimport android.view.View\nimport android.view.ViewGroup\nimport androidx.fragment.app.Fragment\nimport androidx.recyclerview.widget.LinearLayoutManager\nimport androidx.recyclerview.widget.RecyclerView\nimport com.example.museoartiglieriaapp.Adapters.CarouselAdapter\nimport com.example.museoartiglieriaapp.R\nimport com.google.android.material.carousel.CarouselLayoutManager\n\nclass HomeFragment : Fragment() {\n    override fun onCreateView(\n        inflater: LayoutInflater,\n        container: ViewGroup?,\n        savedInstanceState: Bundle?\n    ): View? {\n        return inflater.inflate(R.layout.fragment_home, container, false)\n    }\n\n    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {\n        super.onViewCreated(view, savedInstanceState)\n\n        // Setup del carosello\n        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)\n        recyclerView.layoutManager = CarouselLayoutManager()\n\n        // Lista delle immagini e dei titoli corrispondenti\n        val images = listOf(\n            R.drawable.event_backgroud,\n            R.drawable.event_2\n        )\n\n        val titles = listOf(\n            \"Artillery & Innovation\",\n            \"Shh, let the cannon speak!\"\n        )\n\n        // Inizializzazione dell'adapter con immagini, titoli e fragmentManager\n        val adapter = CarouselAdapter(images, titles, parentFragmentManager)\n        recyclerView.adapter = adapter\n\n        // Setup degli altri elementi della home...\n        setupHomeButtons(view)\n    }\n\n    private fun setupHomeButtons(view: View) {\n        // Gestione del click sulla card del museo istituzionale\n        view.findViewById<View>(R.id.card_corso_lecce)?.setOnClickListener {\n            parentFragmentManager.beginTransaction()\n                .replace(R.id.fragment_container, DetailsInstitutionalFragment())\n                .addToBackStack(null)\n                .commit()\n        }\n\n        // Gestione del click sulla card del deposito\n        view.findViewById<View>(R.id.card_corso_ferraris)?.setOnClickListener {\n            parentFragmentManager.beginTransaction()\n                .replace(R.id.fragment_container, DetailsMuseumFragment())\n                .addToBackStack(null)\n                .commit()\n        }\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/museoartiglieriaapp/Fragments/HomeFragment.kt b/app/src/main/java/com/example/museoartiglieriaapp/Fragments/HomeFragment.kt
+--- a/app/src/main/java/com/example/museoartiglieriaapp/Fragments/HomeFragment.kt	(revision 556ee4a0e458abfb90ecc19bcc92722cdfb668c6)
++++ b/app/src/main/java/com/example/museoartiglieriaapp/Fragments/HomeFragment.kt	(date 1752620347904)
+@@ -5,7 +5,6 @@
+ import android.view.View
+ import android.view.ViewGroup
+ import androidx.fragment.app.Fragment
+-import androidx.recyclerview.widget.LinearLayoutManager
+ import androidx.recyclerview.widget.RecyclerView
+ import com.example.museoartiglieriaapp.Adapters.CarouselAdapter
+ import com.example.museoartiglieriaapp.R
+@@ -38,11 +37,11 @@
+             "Shh, let the cannon speak!"
+         )
+ 
+-        // Inizializzazione dell'adapter con immagini, titoli e fragmentManager
+-        val adapter = CarouselAdapter(images, titles, parentFragmentManager)
++        // Inizializzazione dell'adapter solo con immagini e titoli
++        val adapter = CarouselAdapter(images, titles)
+         recyclerView.adapter = adapter
+ 
+-        // Setup degli altri elementi della home...
++        // Setup degli altri elementi della home
+         setupHomeButtons(view)
+     }
+ 
+Index: app/src/main/java/com/example/museoartiglieriaapp/Adapters/CarouselAdapter.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.museoartiglieriaapp.Adapters\n\nimport android.view.LayoutInflater\nimport android.view.View\nimport android.view.ViewGroup\nimport android.widget.ImageView\nimport android.widget.TextView\nimport androidx.fragment.app.FragmentManager\nimport androidx.recyclerview.widget.RecyclerView\nimport com.example.museoartiglieriaapp.R\n\nclass CarouselAdapter(\n    private val images: List<Int>,\n    private val titles: List<String>,\n    private val fragmentManager: FragmentManager\n) : RecyclerView.Adapter<CarouselAdapter.CarouselViewHolder>() {\n\n    class CarouselViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {\n        val imageView: ImageView = itemView.findViewById(R.id.imageViewItem)\n        val titleView: TextView = itemView.findViewById(R.id.imageTitle)\n    }\n\n    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarouselViewHolder {\n        val view = LayoutInflater.from(parent.context)\n            .inflate(R.layout.recycle_item, parent, false)\n        return CarouselViewHolder(view)\n    }\n\n    override fun onBindViewHolder(holder: CarouselViewHolder, position: Int) {\n        holder.imageView.setImageResource(images[position])\n        holder.titleView.text = titles[position]\n\n    }\n\n    override fun getItemCount(): Int = images.size\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/museoartiglieriaapp/Adapters/CarouselAdapter.kt b/app/src/main/java/com/example/museoartiglieriaapp/Adapters/CarouselAdapter.kt
+--- a/app/src/main/java/com/example/museoartiglieriaapp/Adapters/CarouselAdapter.kt	(revision 556ee4a0e458abfb90ecc19bcc92722cdfb668c6)
++++ b/app/src/main/java/com/example/museoartiglieriaapp/Adapters/CarouselAdapter.kt	(date 1752620347900)
+@@ -5,14 +5,12 @@
+ import android.view.ViewGroup
+ import android.widget.ImageView
+ import android.widget.TextView
+-import androidx.fragment.app.FragmentManager
+ import androidx.recyclerview.widget.RecyclerView
+ import com.example.museoartiglieriaapp.R
+ 
+ class CarouselAdapter(
+     private val images: List<Int>,
+-    private val titles: List<String>,
+-    private val fragmentManager: FragmentManager
++    private val titles: List<String>
+ ) : RecyclerView.Adapter<CarouselAdapter.CarouselViewHolder>() {
+ 
+     class CarouselViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+@@ -29,7 +27,6 @@
+     override fun onBindViewHolder(holder: CarouselViewHolder, position: Int) {
+         holder.imageView.setImageResource(images[position])
+         holder.titleView.text = titles[position]
+-
+     }
+ 
+     override fun getItemCount(): Int = images.size
+Index: app/src/main/java/com/example/museoartiglieriaapp/EventViewFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/museoartiglieriaapp/EventViewFragment.kt b/app/src/main/java/com/example/museoartiglieriaapp/EventViewFragment.kt
+new file mode 100644
+--- /dev/null	(date 1752620048414)
++++ b/app/src/main/java/com/example/museoartiglieriaapp/EventViewFragment.kt	(date 1752620048414)
+@@ -0,0 +1,59 @@
++package com.example.museoartiglieriaapp
++
++import android.os.Bundle
++import androidx.fragment.app.Fragment
++import android.view.LayoutInflater
++import android.view.View
++import android.view.ViewGroup
++
++// TODO: Rename parameter arguments, choose names that match
++// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
++private const val ARG_PARAM1 = "param1"
++private const val ARG_PARAM2 = "param2"
++
++/**
++ * A simple [Fragment] subclass.
++ * Use the [EventViewFragment.newInstance] factory method to
++ * create an instance of this fragment.
++ */
++class EventViewFragment : Fragment() {
++    // TODO: Rename and change types of parameters
++    private var param1: String? = null
++    private var param2: String? = null
++
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        arguments?.let {
++            param1 = it.getString(ARG_PARAM1)
++            param2 = it.getString(ARG_PARAM2)
++        }
++    }
++
++    override fun onCreateView(
++        inflater: LayoutInflater, container: ViewGroup?,
++        savedInstanceState: Bundle?
++    ): View? {
++        // Inflate the layout for this fragment
++        return inflater.inflate(R.layout.fragment_event_view, container, false)
++    }
++
++    companion object {
++        /**
++         * Use this factory method to create a new instance of
++         * this fragment using the provided parameters.
++         *
++         * @param param1 Parameter 1.
++         * @param param2 Parameter 2.
++         * @return A new instance of fragment EventViewFragment.
++         */
++        // TODO: Rename and change types and number of parameters
++        @JvmStatic
++        fun newInstance(param1: String, param2: String) =
++            EventViewFragment().apply {
++                arguments = Bundle().apply {
++                    putString(ARG_PARAM1, param1)
++                    putString(ARG_PARAM2, param2)
++                }
++            }
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_event_view.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_event_view.xml b/app/src/main/res/layout/fragment_event_view.xml
+new file mode 100644
+--- /dev/null	(date 1752620184163)
++++ b/app/src/main/res/layout/fragment_event_view.xml	(date 1752620184163)
+@@ -0,0 +1,164 @@
++<?xml version="1.0" encoding="utf-8"?>
++
++<androidx.coordinatorlayout.widget.CoordinatorLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:background="@drawable/event_backgroud"
++    >
++
++    <ImageView
++        android:id="@+id/background_image"
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:scaleType="centerCrop"
++        android:src="@drawable/event_backgroud"
++        />
++
++    <ImageButton
++        android:id="@+id/close_button"
++        android:layout_width="48dp"
++        android:layout_height="48dp"
++        android:layout_marginStart="16dp"
++        android:layout_marginTop="16dp"
++        android:background="?attr/selectableItemBackgroundBorderless"
++        android:contentDescription="@string/close_button_description"
++
++        android:src="@drawable/close_btn"
++        app:tint="@color/white"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++
++
++    <LinearLayout
++        android:layout_marginTop="100dp"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:orientation="vertical">
++
++        <com.google.android.material.card.MaterialCardView
++            android:id="@+id/event_card"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="32dp"
++            android:layout_marginEnd="32dp"
++            android:layout_marginBottom="32dp"
++            app:cardCornerRadius="16dp"
++            app:cardElevation="8dp"
++            app:cardBackgroundColor="@color/card_background"
++            app:strokeColor="@color/card_border"
++            app:strokeWidth="1dp">
++
++            <androidx.constraintlayout.widget.ConstraintLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:paddingBottom="24dp"> <TextView
++                android:id="@+id/event_title"
++                android:layout_width="0dp"
++                android:layout_height="wrap_content"
++                android:layout_marginStart="24dp"
++                android:layout_marginTop="24dp"
++                android:layout_marginEnd="24dp"
++                android:text="@string/event_title_text"
++                android:textColor="@color/event_title_color"
++                android:textSize="24sp"
++                android:textStyle="bold"
++                android:gravity="center_horizontal"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toTopOf="parent" />
++
++                <TextView
++                    android:id="@+id/event_subtitle"
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:layout_marginStart="24dp"
++                    android:layout_marginTop="4dp"
++                    android:layout_marginEnd="24dp"
++                    android:text="@string/event_subtitle_text"
++                    android:textColor="@color/event_subtitle_color"
++                    android:textSize="16sp"
++                    android:gravity="center_horizontal"
++                    app:layout_constraintEnd_toEndOf="parent"
++                    app:layout_constraintStart_toStartOf="parent"
++                    app:layout_constraintTop_toBottomOf="@+id/event_title" />
++
++                <com.google.android.material.card.MaterialCardView
++                    android:id="@+id/date_card"
++                    android:layout_width="80dp"
++                    android:layout_height="80dp"
++                    android:layout_marginTop="24dp"
++                    app:cardCornerRadius="8dp"
++                    app:cardElevation="4dp"
++                    app:cardBackgroundColor="@color/date_card_background"
++                    app:layout_constraintEnd_toEndOf="parent"
++                    app:layout_constraintStart_toStartOf="parent"
++                    app:layout_constraintTop_toBottomOf="@+id/event_subtitle">
++
++                    <LinearLayout
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:orientation="vertical"
++                        android:gravity="center">
++
++                        <TextView
++                            android:id="@+id/event_day"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:text="20"
++                            android:textColor="@color/date_card_text_color"
++                            android:textSize="32sp"
++                            android:textStyle="bold" />
++
++                        <TextView
++                            android:id="@+id/event_month"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:text="June"
++                            android:textColor="@color/date_card_text_color"
++                            android:textSize="14sp" />
++                    </LinearLayout>
++                </com.google.android.material.card.MaterialCardView>
++
++                <TextView
++                    android:id="@+id/event_description_part1"
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:layout_marginStart="24dp"
++                    android:layout_marginTop="24dp"
++                    android:layout_marginEnd="24dp"
++                    android:text="@string/event_description_part1"
++                    android:textColor="@color/event_description_color"
++                    android:textSize="16sp"
++                    android:lineSpacingExtra="4dp"
++                    android:gravity="center_horizontal"
++                    app:layout_constraintEnd_toEndOf="parent"
++                    app:layout_constraintStart_toStartOf="parent"
++                    app:layout_constraintTop_toBottomOf="@+id/date_card" />
++
++                <TextView
++                    android:id="@+id/event_description_part2"
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:layout_marginStart="24dp"
++                    android:layout_marginTop="16dp"
++                    android:layout_marginEnd="24dp"
++                    android:text="@string/event_description_part2"
++                    android:textColor="@color/event_description_color"
++                    android:textSize="16sp"
++                    android:lineSpacingExtra="4dp"
++                    android:gravity="center_horizontal"
++                    app:layout_constraintEnd_toEndOf="parent"
++                    app:layout_constraintStart_toStartOf="parent"
++                    app:layout_constraintTop_toBottomOf="@+id/event_description_part1" />
++
++            </androidx.constraintlayout.widget.ConstraintLayout>
++        </com.google.android.material.card.MaterialCardView>
++
++    </LinearLayout>
++
++
++</androidx.coordinatorlayout.widget.CoordinatorLayout>
+\ No newline at end of file

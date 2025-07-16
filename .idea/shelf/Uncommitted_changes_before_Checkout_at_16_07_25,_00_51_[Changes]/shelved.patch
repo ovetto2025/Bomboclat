@@ -1,0 +1,195 @@
+Index: app/src/main/java/com/example/museoartiglieriaapp/Adapters/CarouselAdapter.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.museoartiglieriaapp.Adapters\n\nimport android.view.LayoutInflater\nimport android.view.View\nimport android.view.ViewGroup\nimport android.widget.ImageView\nimport android.widget.TextView\nimport androidx.fragment.app.FragmentManager\nimport androidx.recyclerview.widget.RecyclerView\nimport com.example.museoartiglieriaapp.R\n\nclass CarouselAdapter(\n    private val images: List<Int>,\n    private val titles: List<String>,\n    private val fragmentManager: FragmentManager\n) : RecyclerView.Adapter<CarouselAdapter.CarouselViewHolder>() {\n\n    class CarouselViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {\n        val imageView: ImageView = itemView.findViewById(R.id.imageViewItem)\n        val titleView: TextView = itemView.findViewById(R.id.imageTitle)\n    }\n\n    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarouselViewHolder {\n        val view = LayoutInflater.from(parent.context)\n            .inflate(R.layout.recycle_item, parent, false)\n        return CarouselViewHolder(view)\n    }\n\n    override fun onBindViewHolder(holder: CarouselViewHolder, position: Int) {\n        holder.imageView.setImageResource(images[position])\n        holder.titleView.text = titles[position]\n\n    }\n\n    override fun getItemCount(): Int = images.size\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/museoartiglieriaapp/Adapters/CarouselAdapter.kt b/app/src/main/java/com/example/museoartiglieriaapp/Adapters/CarouselAdapter.kt
+--- a/app/src/main/java/com/example/museoartiglieriaapp/Adapters/CarouselAdapter.kt	(revision 556ee4a0e458abfb90ecc19bcc92722cdfb668c6)
++++ b/app/src/main/java/com/example/museoartiglieriaapp/Adapters/CarouselAdapter.kt	(date 1752619876883)
+@@ -30,6 +30,15 @@
+         holder.imageView.setImageResource(images[position])
+         holder.titleView.text = titles[position]
+ 
++        holder.itemView.setOnClickListener {
++            if (position == 0) {
++                fragmentManager.beginTransaction()
++                    .replace(R.id.fragment_container, EventViewFragment())
++                    .addToBackStack(null)
++                    .commit()
++            }
++        }
++
+     }
+ 
+     override fun getItemCount(): Int = images.size
+Index: app/src/main/res/layout/fragment_event_view.xml
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_event_view.xml b/app/src/main/res/layout/fragment_event_view.xml
+new file mode 100644
+--- /dev/null	(date 1752619876885)
++++ b/app/src/main/res/layout/fragment_event_view.xml	(date 1752619876885)
+@@ -0,0 +1,89 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:background="@color/white">
++
++    <ImageButton
++        android:id="@+id/close_button"
++        android:layout_width="48dp"
++        android:layout_height="48dp"
++        android:layout_marginTop="16dp"
++        android:layout_marginEnd="16dp"
++        android:background="?attr/selectableItemBackgroundBorderless"
++        android:contentDescription="@string/close_button"
++        android:src="@drawable/ic_close"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <ImageView
++        android:id="@+id/event_image"
++        android:layout_width="0dp"
++        android:layout_height="200dp"
++        android:layout_marginTop="16dp"
++        android:scaleType="centerCrop"
++        android:src="@drawable/event_backgroud"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        android:contentDescription="@string/event_image_description" />
++
++    <TextView
++        android:id="@+id/event_title"
++        android:layout_width="0dp"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="24dp"
++        android:layout_marginTop="24dp"
++        android:layout_marginEnd="24dp"
++        android:text="Artillery &amp; Innovation"
++        android:textSize="24sp"
++        android:textStyle="bold"
++        android:fontFamily="@font/inter"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/event_image" />
++
++    <TextView
++        android:id="@+id/event_date"
++        android:layout_width="0dp"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="24dp"
++        android:layout_marginTop="8dp"
++        android:layout_marginEnd="24dp"
++        android:text="20 Luglio 2025"
++        android:textSize="16sp"
++        android:fontFamily="@font/inter"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/event_title" />
++
++    <TextView
++        android:id="@+id/event_description"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_marginStart="24dp"
++        android:layout_marginTop="16dp"
++        android:layout_marginEnd="24dp"
++        android:layout_marginBottom="24dp"
++        android:text="Unisciti a noi per una giornata straordinaria dedicata all'innovazione nell'artiglieria! Scopri come la tecnologia ha trasformato quest'arte militare nel corso dei secoli.\n\nDurante l'evento, potrai:\n- Esplorare i progressi tecnologici nell'artiglieria\n- Vedere dimostrazioni di restauro\n- Partecipare a workshop interattivi\n- Incontrare esperti del settore"
++        android:textSize="16sp"
++        android:fontFamily="@font/inter"
++        app:layout_constraintBottom_toTopOf="@+id/ttsButton"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/event_date" />
++
++    <ImageButton
++        android:id="@+id/ttsButton"
++        android:layout_width="48dp"
++        android:layout_height="48dp"
++        android:layout_marginBottom="24dp"
++        android:background="?attr/selectableItemBackgroundBorderless"
++        android:contentDescription="@string/tts_button"
++        android:src="@drawable/ic_volume_up"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+Index: app/src/main/java/com/example/museoartiglieriaapp/Fragments/EventViewFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/museoartiglieriaapp/Fragments/EventViewFragment.kt b/app/src/main/java/com/example/museoartiglieriaapp/Fragments/EventViewFragment.kt
+new file mode 100644
+--- /dev/null	(date 1752619876880)
++++ b/app/src/main/java/com/example/museoartiglieriaapp/Fragments/EventViewFragment.kt	(date 1752619876880)
+@@ -0,0 +1,63 @@
++package com.example.museoartiglieriaapp.Fragments
++
++import android.os.Bundle
++import android.view.LayoutInflater
++import android.view.View
++import android.view.ViewGroup
++import android.widget.ImageButton
++import androidx.fragment.app.Fragment
++import com.example.museoartiglieriaapp.R
++import android.speech.tts.TextToSpeech
++import android.widget.TextView
++import java.util.Locale
++
++class EventViewFragment : Fragment() {
++    private var tts: TextToSpeech? = null
++
++    override fun onCreateView(
++        inflater: LayoutInflater,
++        container: ViewGroup?,
++        savedInstanceState: Bundle?
++    ): View? {
++        return inflater.inflate(R.layout.fragment_event_view, container, false)
++    }
++
++    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
++        super.onViewCreated(view, savedInstanceState)
++
++        // Gestione del pulsante di chiusura
++        view.findViewById<ImageButton>(R.id.close_button)?.setOnClickListener {
++            parentFragmentManager.beginTransaction()
++                .replace(R.id.fragment_container, HomeFragment())
++                .commit()
++        }
++
++        // Inizializzazione delle view per il TTS
++        val ttsButton = view.findViewById<View>(R.id.ttsButton)
++        val title = view.findViewById<TextView>(R.id.event_title)
++        val description = view.findViewById<TextView>(R.id.event_description)
++        val date = view.findViewById<TextView>(R.id.event_date)
++
++        // Inizializzazione del TTS
++        tts = TextToSpeech(requireContext()) { status ->
++            if (status == TextToSpeech.SUCCESS) {
++                tts?.language = Locale.ITALIAN
++            }
++        }
++
++        // Gestione del click sul bottone TTS
++        ttsButton.setOnClickListener {
++            val info = StringBuilder()
++            info.append("${title.text}. ")
++            info.append("Data evento: ${date.text}. ")
++            info.append("${description.text}. ")
++            tts?.speak(info.toString(), TextToSpeech.QUEUE_FLUSH, null, null)
++        }
++    }
++
++    override fun onDestroyView() {
++        tts?.stop()
++        tts?.shutdown()
++        super.onDestroyView()
++    }
++}
