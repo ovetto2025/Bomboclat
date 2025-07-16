@@ -38,7 +38,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cards_container_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                >
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card1"
@@ -202,10 +203,11 @@
                             android:textSize="18sp"
                             android:textStyle="bold" />
                     </FrameLayout>
+
                 </com.google.android.material.card.MaterialCardView>
 
-
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.core.widget.NestedScrollView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
