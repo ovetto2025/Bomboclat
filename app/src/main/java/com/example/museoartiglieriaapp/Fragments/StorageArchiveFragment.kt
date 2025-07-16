@@ -30,6 +30,7 @@ class StorageArchiveFragment : Fragment() {
         // Carico le immagini nelle card
         Glide.with(this)
             .load(artifactImageUrls["TANKS"])
+
             .placeholder(R.drawable.placeholder_shape)
             .into(view.findViewById(R.id.image_tanks))
         Glide.with(this)
