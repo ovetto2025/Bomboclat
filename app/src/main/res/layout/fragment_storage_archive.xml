@@ -63,6 +63,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/image_card1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:contentDescription="Placeholder"
@@ -101,6 +102,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/image_card2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:contentDescription="Placeholder"
@@ -141,6 +143,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/image_card4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:contentDescription="Placeholder"
@@ -181,6 +184,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/image_card5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:contentDescription="Placeholder"
