@@ -39,7 +39,7 @@ The Artillery Museum App is an Android application designed to enhance the visit
 
 ## 4. Data Management
 - **Local:** Room database for exhibits and user preferences
-- **Remote:** Retrofit for API calls to fetch latest museum data
+- **Remote:** Retrofit for API calls to fetch latest museum data (to be implemented)
 - **Caching:** Image and data caching for performance
 
 ## 5. Security & Privacy
@@ -91,5 +91,4 @@ The Artillery Museum App is an Android application designed to enhance the visit
 - Document code and update technical documentation
 - Use feature branches and pull requests
 
-## 13. License
-[Specify license here]
+
