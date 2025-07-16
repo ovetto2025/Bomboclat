@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-50dp"
             android:padding="12dp"
-            android:text="M91"
+            android:text="ARTEFATTO"
             android:textColor="@color/white"
             android:textSize="50sp"
             android:textStyle="bold"
@@ -204,6 +204,19 @@
             android:backgroundTint="@color/white"
             android:tint="@color/black"
             />
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="Chiudi"
+            android:padding="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

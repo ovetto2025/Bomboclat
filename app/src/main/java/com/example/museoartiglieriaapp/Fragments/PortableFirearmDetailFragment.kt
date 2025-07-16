@@ -96,6 +96,7 @@ class PortableFirearmDetailFragment : Fragment() {
         val specsText = view.findViewById<TextView>(R.id.specs_text)
         val historyText = view.findViewById<TextView>(R.id.history_text)
         val ttsButton = view.findViewById<View>(R.id.ttsButton)
+        val btnClose = view.findViewById<View>(R.id.btn_close)
 
         firearm?.let {
             val imageUrl = artifactImageUrls[it.name]
@@ -161,6 +162,9 @@ class PortableFirearmDetailFragment : Fragment() {
                 if (it.briefHistory.isNotBlank()) info.append("Breve storia: ${it.briefHistory}.")
                 tts?.speak(info.toString(), TextToSpeech.QUEUE_FLUSH, null, null)
             }
+        }
+        btnClose.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
         }
     }
 

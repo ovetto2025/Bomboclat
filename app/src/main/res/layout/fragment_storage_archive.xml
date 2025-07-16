@@ -63,7 +63,6 @@
                             android:id="@+id/image_tanks"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/tanks"
                             android:contentDescription="Tanks Category"
                             android:scaleType="centerCrop"
                             /> <View
@@ -103,7 +102,6 @@
                         <ImageView
                             android:id="@+id/image_portable_firearms"
                             android:layout_width="match_parent"
-                            android:src="@drawable/weapons"
                             android:layout_height="match_parent"
                             android:contentDescription="Portable Firearms Category"
                             android:scaleType="centerCrop"
@@ -144,7 +142,6 @@
 
                         <ImageView
                             android:id="@+id/image_edged_weapons"
-                            android:src="@drawable/edged_weapons"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:contentDescription="Edged Weapons Category"
@@ -187,7 +184,6 @@
                         <ImageView
                             android:id="@+id/image_military_equipment"
                             android:layout_width="match_parent"
-                            android:src="@drawable/firearms"
                             android:layout_height="match_parent"
                             android:contentDescription="Military Equipment Category"
                             android:scaleType="centerCrop"

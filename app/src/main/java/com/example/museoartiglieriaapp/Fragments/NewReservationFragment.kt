@@ -201,6 +201,10 @@ class NewReservationFragment : Fragment() {
         }
         location1.setOnClickListener(locationClickListener)
         location2.setOnClickListener(locationClickListener)
+
+        view.findViewById<View>(R.id.backButton)?.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     private fun getSelectedDate(datePicker: DatePicker): String {
